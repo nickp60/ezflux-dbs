@@ -1,0 +1,12 @@
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+pdfplumber
+nbformat
+nbconvert
+ipykernel
+# optional, for completing/validating media: micom, qiime2, cobra (+ agora201_refseq216_species_1.qza, Recon3D.xml.gz)
+# system tool: pdftotext (poppler-utils)
+# for the notebook: cobra, micom, qiime2, plus data/agora201_refseq216_species_1.qza
