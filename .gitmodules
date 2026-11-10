@@ -1,0 +1,3 @@
+[submodule "media/bmt/data/media"]
+	path = media/bmt/data/media
+	url = git@github.com:micom-dev/media.git

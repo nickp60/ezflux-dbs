@@ -8,10 +8,11 @@
 # media_out/<diet>_micom_medium.csv.  Step 04 uses the completed files if they exist
 # and falls back to the skeleton files otherwise.
 set -euo pipefail
+mkdir -p  results/energy/
 cd code
 
 python 01_extract_s12_table.py ../data/inputs/AGORA_S12_diets_nbt3703_MOESM2.pdf ../data/agora_s12_table12.csv
-python 02_qza_to_csv.py ../data/inputs ../data/media_csv
+python 02_qza_to_csv.py ../data/media/media/ ../data/media_csv
 
 suffix=micom_medium
 ls ../media_out/*_${suffix}.csv > /dev/null 2>&1 || suffix=skeleton
