@@ -6,8 +6,8 @@ how does the table's "High fiber" design differ from vmh_high_fiber_agora?
 
 Usage
 -----
-    python compare_s12_vs_micom.py --s12-csv ../data/agora_s12_table12.csv \
-        --media-dir ../data/inputs -o ../results/s12_vs_micom_provided
+    python 05_compare_s12_vs_micom.py --s12-csv ../data/agora_s12_table12.csv \
+        --media-dir ../data/media_csv -o ../results/s12_vs_micom_provided
 
 Writes  s12_vs_provided_media.csv  and  s12_vs_provided_media.png, and prints:
   * the ratio  western_diet_gut_agora / Table-12 Western  (0.1, 1 or 0)
@@ -24,7 +24,9 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-import compare_micom_media as cm
+import importlib.util
+spec = importlib.util.spec_from_file_location("cm", Path(__file__).with_name("04_compare_micom_media.py"))
+cm = importlib.util.module_from_spec(spec); spec.loader.exec_module(cm)
 
 ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 ap.add_argument("--s12-csv", required=True)

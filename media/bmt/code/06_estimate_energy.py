@@ -9,7 +9,7 @@ strch1 = 11-12 glucose residues, strch2 = 3-4.
 
 Usage
 -----
-    python estimate_energy.py  ../data/inputs/custom_diet_fluxes.csv  ../results/comparison_all_diets/all_media_long.csv
+    python 06_estimate_energy.py ../data/inputs/custom_diet_fluxes.csv  ../results/comparison_all_diets/all_media_long.csv
 
 Part 1 treats the first CSV as a VMH Diet Designer export (mmol/human/day;
 duplicates summed; D-amino-acid duplicates reported separately).

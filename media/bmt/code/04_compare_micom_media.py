@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 """
-Parse and compare MICOM growth media (QIIME 2 `MicomMedium[Global]` .qza files,
-e.g. from https://github.com/micom-dev/media) and plot their nutrient content.
+Parse and compare MICOM growth media (the medium tables of QIIME 2 `MicomMedium[Global]`
+artifacts, e.g. from https://github.com/micom-dev/media, as CSV) and plot their nutrient
+content.
 
 Usage
 -----
-    python compare_micom_media.py  ../data/inputs  -o ../results/comparison_all_diets \
-        --fluxes-csv ../data/inputs/custom_diet_fluxes.csv:custom_diet \
-        --s12-csv ../data/agora_s12_table12.csv
+    python 04_compare_micom_media.py  ../data/media_csv ../media_out/*_micom_medium.csv \
+        -o ../results/comparison_all_diets
 
-Inputs may be .qza files and/or directories of them.  Extra diets:
-  --fluxes-csv  a VMH Diet Designer export (reaction, flux in mmol/(human*day));
+Inputs are MICOM medium CSV files (columns include global_id, flux) and/or directories of
+them: the provided media converted by 02_qza_to_csv.py (data/media_csv/) and the media
+written by 03_make_micom_media.ipynb (media_out/<diet>_micom_medium.csv, or the
+<diet>_skeleton.csv written before completion).  The diet name is the file name without
+the "_micom_medium" / "_skeleton" suffix.  Two optional extra inputs:
+  --fluxes-csv  a raw VMH Diet Designer export (reaction, flux in mmol/(human*day));
                 duplicated reactions are summed.  May be repeated.
-  --s12-csv     the CSV from extract_s12_table.py; adds two diets,
-                agora_s12_western and agora_s12_high_fiber (mmol/gDW/h).
-
-  --medium-csv  a MICOM-format medium CSV written by make_micom_media.ipynb
-                (media_out/<diet>_skeleton.csv or <diet>_micom_medium.csv); repeatable.
-
-A .qza is just a zip archive; the medium lives in  <uuid>/data/medium.csv.
-Files are read straight out of the zip (nothing is extracted to disk).
+  --s12-csv     the CSV from extract_s12_table.py; adds agora_s12_western and
+                agora_s12_high_fiber exactly as tabulated (mmol/gDW/h).  Do not combine
+                with notebook output of the same names.
 
 Units (read this before interpreting absolute numbers)
 -----------------------------------------------------
@@ -61,7 +60,7 @@ DIET_DESIGNER_DIETS = set()   # names of diets loaded via --fluxes-csv (filled a
 
 
 def unit_group(name: str) -> str:
-    if name.startswith("vmh_") or name in DIET_DESIGNER_DIETS:
+    if name.startswith(("vmh_", "custom_diet")) or name in DIET_DESIGNER_DIETS:
         return "VMH-derived (scale unverified)"
     if name.startswith(("western_diet", "breast_milk", "agora_s12")):
         return "MICOM per-biomass (mmol/gDW/h)"
@@ -81,7 +80,7 @@ AMINO_EXTRA = {"4hpro_LT", "gly", "orn", "ala_B", "4abut", "4hpro", "5oxpro", "c
 CLASS_SETS = {
     "Water & gases": {"h2o", "h", "h2", "o2", "co2", "n2", "n2o", "no", "no2", "no3",
                       "nh4", "h2s", "ph2s"},
-    "Minerals & ions": {"ca2", "cl", "k", "na1", "mg2", "fe2", "fe3", "fe3dcit", "zn2",
+    "Minerals & ions": {"f", "ca2", "cl", "k","na1", "mg2", "fe2", "fe3", "fe3dcit", "zn2",
                         "cu2", "mn2", "cobalt2", "mobd", "sel", "so4", "so3", "tsul",
                         "pi", "ppi", "tet", "i", "cu2x"},
     "Vitamins & cofactors": {"10fthf", "5mthf", "thf", "fol", "btn", "ribflv", "rbflvrd",
@@ -96,7 +95,7 @@ CLASS_SETS = {
                             "ura", "uri", "duri", "thymd", "cytd", "dcyt", "csn", "din",
                             "dad_2", "ins", "amp", "cmp", "gtp", "datp", "dtmp",
                             "orot", "urate", "urea"},
-    "Short-chain & organic acids": {"ac", "but", "ppa", "for", "lac_L", "lac_D", "succ",
+    "Short-chain & organic acids": {"malicL", "tartr_L", "ac","but", "ppa", "for", "lac_L", "lac_D", "succ",
                                     "fum", "mal_L", "cit", "oxa", "pyr", "akg", "oaa",
                                     "acac", "bhb", "2hb", "2obut", "3mop", "glutar",
                                     "glyclt", "glcn", "2ddglcn", "actn_R", "isocapr"},
@@ -161,12 +160,9 @@ def classify(met: str) -> str:
     return "Other"
 
 
-def read_qza(path: Path) -> pd.DataFrame:
-    with zipfile.ZipFile(path) as z:
-        members = [n for n in z.namelist() if n.endswith("data/medium.csv")]
-        if len(members) != 1:
-            raise ValueError(f"{path.name}: expected one data/medium.csv, found {members}")
-        df = pd.read_csv(io.BytesIO(z.read(members[0])))
+def read_medium_csv(path: Path) -> pd.DataFrame:
+    """A MICOM medium table (medium.csv from a .qza, see qza_to_csv.py, or a notebook output)."""
+    df = pd.read_csv(path)
     if "global_id" not in df or "flux" not in df:
         raise ValueError(f"{path.name}: missing global_id/flux columns ({list(df.columns)})")
     out = pd.DataFrame({
@@ -176,6 +172,11 @@ def read_qza(path: Path) -> pd.DataFrame:
     })
     # CarveMe medium repeats a few rows (pheme, thm, spmd): collapse, don't sum.
     return out.groupby("metabolite", as_index=False).agg(flux=("flux", "max"), name=("name", "first"))
+
+
+def diet_name(path: Path) -> str:
+    """File name -> diet name (upload-hash prefix and notebook suffixes removed)."""
+    return re.sub(r"(_micom_medium|_skeleton)$", "", re.sub(r"^[0-9a-f]{8}-", "", path.stem))
 
 
 # VMH Diet Designer names -> the AGORA exchange IDs used by the .qza media
@@ -218,16 +219,16 @@ def read_s12_csv(path: Path) -> dict:
     return out
 
 
-def load_all(paths, fluxes_csvs=(), s12_csv=None, medium_csvs=()):
+def load_all(paths, fluxes_csvs=(), s12_csv=None):
     files = []
     for p in map(Path, paths):
-        files += sorted(p.glob("*.qza")) if p.is_dir() else [p]
+        files += sorted(p.glob("*.csv")) if p.is_dir() else [p]
     if not files:
-        sys.exit("No .qza files found.")
+        sys.exit("No medium CSV files found.")
     long = []
     for f in files:
-        diet = re.sub(r"^[0-9a-f]{8}-", "", f.stem)   # strip upload-hash prefixes
-        d = read_qza(f)
+        diet = diet_name(f)
+        d = read_medium_csv(f)
         d["diet"] = diet
         d["unit_group"] = unit_group(diet)
         long.append(d)
@@ -236,15 +237,6 @@ def load_all(paths, fluxes_csvs=(), s12_csv=None, medium_csvs=()):
         nm = nm or Path(path).stem.split("-", 1)[-1]
         DIET_DESIGNER_DIETS.add(nm)
         d = read_fluxes_csv(Path(path))
-        d["diet"], d["unit_group"] = nm, unit_group(nm)
-        long.append(d)
-    for spec in medium_csvs:                       # MICOM-format medium CSV, "path.csv[:diet_name]"
-        path, _, nm = spec.partition(":")
-        nm = nm or Path(path).stem
-        m = pd.read_csv(path)
-        d = pd.DataFrame({"metabolite": m["metabolite"].map(normalise_id), "flux": m["flux"].astype(float),
-                          "name": m["name"] if "name" in m else np.nan})
-        d = d.groupby("metabolite", as_index=False).agg(flux=("flux", "max"), name=("name", "first"))
         d["diet"], d["unit_group"] = nm, unit_group(nm)
         long.append(d)
     if s12_csv:
@@ -439,19 +431,17 @@ def plot_absolute_scatter(long, outdir, rescaled):
 # --------------------------------------------------------------------------- #
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("inputs", nargs="+", help=".qza files and/or directories containing them")
+    ap.add_argument("inputs", nargs="+", help="medium CSV files and/or directories containing them")
     ap.add_argument("-o", "--outdir", default="media_comparison")
     ap.add_argument("--fluxes-csv", action="append", default=[], metavar="CSV[:NAME]",
                     help="extra diet in VMH Diet Designer format (reaction, flux in mmol/(human*day)); "
                          "duplicates are summed; kept in mmol/day. May be repeated.")
-    ap.add_argument("--medium-csv", action="append", default=[], metavar="CSV[:NAME]",
-                    help="a MICOM-format medium CSV (columns metabolite, flux), e.g. from make_micom_media.ipynb. May be repeated.")
     ap.add_argument("--s12-csv", default=None, help="CSV from extract_s12_table.py (adds the two AGORA S12 diets)")
     args = ap.parse_args()
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="white", context="notebook")
-    long = load_all(args.inputs, args.fluxes_csv, args.s12_csv, args.medium_csv)
+    long = load_all(args.inputs, args.fluxes_csv, args.s12_csv)
     rescaled = False
 
     # tidy + wide tables
