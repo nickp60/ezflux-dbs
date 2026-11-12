@@ -6,7 +6,7 @@ nbt.3703, MOESM2) into a tidy CSV.
 
 Usage
 -----
-    python extract_s12_table.py  AGORA_S12_diets_nbt3703_MOESM2.pdf  agora_s12_table12.csv
+    python 01_extract_s12_table.py AGORA_S12_diets_nbt3703_MOESM2.pdf  agora_s12_table12.csv
 
 Needs the `pdftotext` command line tool (poppler-utils).  The PDF is read with
 `pdftotext -layout`; every table row looks like
