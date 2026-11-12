@@ -19,4 +19,6 @@ this successfully downloads 7182 genomes; some may have been removed from NCBI, 
 ```
 snakemake --snakefile agora2/02-make_agora2_blastdb/Snakefile --config agora_genomes=/data1/collab004/resources/dbs/sylph/agora2_clean_full/genomes/ dbname="agora2_16S"   --directory /data1/collab004/resources/dbs/sylph/agora2_clean_full/ --rerun-triggers mtime  --rerun-incomplete -n
 
+
+SNAKEMAKE_PROFILE=""  snakemake --snakefile agora2/02-make_agora2_blastdb/Snakefile --config agora_genomes=/data1/collab004/resources/dbs/sylph/agora2_clean_full/genomes/ dbname="agora2_16S"   --directory /data1/collab004/resources/dbs/sylph/agora2_clean_full/ --rerun-triggers mtime  --rerun-incomplete -n --local-cores 32 --jobs 32 --cores 32  --use-singularity --singularity-prefix /data1/collab004/singularity/ --singularity-args "-e --bind $PWD,/data1/collab004/"
 ```

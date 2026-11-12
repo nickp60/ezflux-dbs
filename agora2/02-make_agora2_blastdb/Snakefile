@@ -47,7 +47,7 @@ rule barnapp_agora:
     container: "docker://chrishah/barrnap:0.9",
     threads: 1
     shell:"""
-    zcat {input.fasta} | barrnap -o {output.fasta} --threads {threads} -  > /dev/null
+    zcat {input.fasta} | barrnap -o {output.fasta} --threads {threads} -  &> /dev/null
     """
 
 rule agg_and_reheader:
