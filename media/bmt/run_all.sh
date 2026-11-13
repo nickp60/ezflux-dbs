@@ -14,6 +14,8 @@ cd code
 python 01_extract_s12_table.py ../data/inputs/AGORA_S12_diets_nbt3703_MOESM2.pdf ../data/agora_s12_table12.csv
 python 02_qza_to_csv.py ../data/media/media/ ../data/media_csv
 
+python 07_check_skeletons.py ../media_out/*_skeleton.csv --media-dir ../data/media_csv --s12-csv ../data/agora_s12_table12.csv
+
 suffix=micom_medium
 ls ../media_out/*_${suffix}.csv > /dev/null 2>&1 || suffix=skeleton
 echo "Using media_out/*_${suffix}.csv"

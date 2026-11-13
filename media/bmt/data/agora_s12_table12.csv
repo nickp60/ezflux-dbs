@@ -5,7 +5,7 @@ Sugars,drib,EX_drib(e),drib,2-deoxy-D-ribose,0.17878295,0.04736842
 Sugars,fru,EX_fru(e),fru,D-Fructose,0.14898579,0.03947368
 Sugars,fuc_L,EX_fuc_L(e),fuc_L,L-fucose,0.14898579,0.03947368
 Sugars,gal,EX_gal(e),gal,D-Galactose,0.14898579,0.03947368
-Sugars,glc_D,EX_glc(e),glc,D-glucose,0.14898579,0.03947368
+Sugars,glc_D,EX_glc(e),glc_D,D-glucose,0.14898579,0.03947368
 Sugars,glcn,EX_glcn(e),glcn,D-gluconate,0.14898579,0.03947368
 Sugars,lcts,EX_lcts(e),lcts,Lactose,0.07449289,0.01973684
 Sugars,malt,EX_malt(e),malt,Maltose,0.07449289,0.01973684

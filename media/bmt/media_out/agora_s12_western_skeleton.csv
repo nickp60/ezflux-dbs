@@ -5,7 +5,7 @@ agora_s12_western,drib,0.017878295,0.1,EX_drib_m,2-deoxy-D-ribose,,,,,,EX_drib(e
 agora_s12_western,fru,0.014898579000000002,0.1,EX_fru_m,D-Fructose,HMDB00660,C02336,439709.0,,,EX_fru(e)
 agora_s12_western,fuc_L,0.014898579000000002,0.1,EX_fuc_L_m,L-fucose,,,,,,EX_fuc_L(e)
 agora_s12_western,gal,0.014898579000000002,0.1,EX_gal_m,D-Galactose,HMDB00143,C00984,439357.0,,,EX_gal(e)
-agora_s12_western,glc,0.14898579,1.0,EX_glc_m,D-glucose,,,,,,EX_glc(e)
+agora_s12_western,glc_D,0.014898579000000002,0.1,EX_glc_D_m,D-glucose,HMDB00122,C00031,5793.0,,,EX_glc_D(e)
 agora_s12_western,glcn,0.014898579000000002,0.1,EX_glcn_m,D-gluconate,HMDB00625,C00257,10690.0,"InChI=1S/C6H12O7/c7-1-2(8)3(9)4(10)5(11)6(12)13/h2-5,7-11H,1H2,(H,12,13)/p-1/t2-,3-,4+,5-/m1/s1",,EX_glcn(e)
 agora_s12_western,lcts,0.007449289000000001,0.1,EX_lcts_m,Lactose,HMDB00186,C00243,440995.0,,,EX_lcts(e)
 agora_s12_western,malt,0.007449289000000001,0.1,EX_malt_m,Maltose,HMDB00163,C00208,439186.0,,,EX_malt(e)

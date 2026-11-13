@@ -5,7 +5,7 @@ agora_s12_western_bmt,drib,0.14302636,0.8,EX_drib_m,2-deoxy-D-ribose,,,,,,EX_dri
 agora_s12_western_bmt,fru,0.11918863200000002,0.8,EX_fru_m,D-Fructose,HMDB00660,C02336,439709.0,,,EX_fru(e)
 agora_s12_western_bmt,fuc_L,0.11918863200000002,0.8,EX_fuc_L_m,L-fucose,,,,,,EX_fuc_L(e)
 agora_s12_western_bmt,gal,0.11918863200000002,0.8,EX_gal_m,D-Galactose,HMDB00143,C00984,439357.0,,,EX_gal(e)
-agora_s12_western_bmt,glc,0.14898579,1.0,EX_glc_m,D-glucose,,,,,,EX_glc(e)
+agora_s12_western_bmt,glc_D,0.11918863200000002,0.8,EX_glc_D_m,D-glucose,HMDB00122,C00031,5793.0,,,EX_glc_D(e)
 agora_s12_western_bmt,glcn,0.11918863200000002,0.8,EX_glcn_m,D-gluconate,HMDB00625,C00257,10690.0,"InChI=1S/C6H12O7/c7-1-2(8)3(9)4(10)5(11)6(12)13/h2-5,7-11H,1H2,(H,12,13)/p-1/t2-,3-,4+,5-/m1/s1",,EX_glcn(e)
 agora_s12_western_bmt,lcts,0.05959431200000001,0.8,EX_lcts_m,Lactose,HMDB00186,C00243,440995.0,,,EX_lcts(e)
 agora_s12_western_bmt,malt,0.05959431200000001,0.8,EX_malt_m,Maltose,HMDB00163,C00208,439186.0,,,EX_malt(e)

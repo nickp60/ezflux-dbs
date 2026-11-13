@@ -56,7 +56,7 @@ The scripts are numbered in execution order.
 ```
 README.md
 requirements.txt
-run_all.sh              runs 01, 02, 04, 05, 06 (step 03 is a notebook, see below)
+run_all.sh              runs 01, 02, 07, 04, 05, 06 (step 03 is a notebook, see below)
 code/
   01_extract_s12_table.py      PDF -> data/agora_s12_table12.csv
   02_qza_to_csv.py             provided .qza media -> data/media_csv/*.csv
@@ -66,6 +66,7 @@ code/
   04_compare_micom_media.py    parse + compare all diets (plots + tables)
   05_compare_s12_vs_micom.py   Table 12 vs the provided media
   06_estimate_energy.py        rough kcal/day estimate
+  07_check_skeletons.py        sanity checks for media_out/*_skeleton.csv (also run by the notebook)
 data/
   agora_s12_table12.csv        parsed Table 12 (164 rows)
   agora_metabolites_from_qza.csv   annotation table rebuilt by the notebook
@@ -101,6 +102,8 @@ The notebook writes CSV only; QIIME 2 artifacts are not created. The annotation 
 **`05_compare_s12_vs_micom.py`** — `python 05_compare_s12_vs_micom.py --s12-csv ../data/agora_s12_table12.csv --media-dir ../data/media_csv -o <outdir>`. Prints the 0.1 / 1 / 0 rule and the High-fiber/Western ratios by category, and saves the comparison figure and a CSV. It imports `04_compare_micom_media.py`, so keep the two together.
 
 **`06_estimate_energy.py`** — `python 06_estimate_energy.py <custom_fluxes.csv> <all_media_long.csv>`. Atwater-factor kcal estimate for a Diet Designer file; for the MICOM media it prints stored-value energy only as a scale check (see its docstring).
+
+**`07_check_skeletons.py`** — `python 07_check_skeletons.py ../media_out/*_skeleton.csv --media-dir ../data/media_csv --s12-csv ../data/agora_s12_table12.csv`. Sanity checks on the skeleton media before the slow completion step; exit status 1 on any error. It checks that IDs are unique and well-formed, flags legacy IDs the models do not have (`glc` instead of `glc_D`, both from a short list and from "same name as a more widely used ID" in the provided media), and verifies that each Table 12 compound is present with a flux of exactly 1 or the diet's dilution factor times the table value (0.1, or 0.8 for `_bmt`), with the same compounds diluted in all four Table 12 diets. The notebook runs it right after writing the skeletons. Warnings (IDs found in none of the provided media, mostly custom-diet-only compounds) do not fail the run.
 
 **What was run here.** The notebook cells up to and including the skeleton table and the skeleton CSVs were executed (outputs are saved in the notebook). The `complete_db_medium`, `check_db_medium` and final save cells were not run because `micom` and the model database were not available here, so the comparison in `results/` uses the skeleton CSVs. After running the notebook, run step 04 again (or `run_all.sh`, which prefers the completed files) to use the completed media. Using the Recon3D exchange list reproduces the 0.1 / x1 split of the provided Western medium for only about 80% of Table 12 compounds (for example Recon3D has no exchange for several ions, and has one for water, which the provided medium leaves undiluted); the provided medium is what the MICOM authors made, so treat the Table 12 diets here as a close but not exact rebuild.
 

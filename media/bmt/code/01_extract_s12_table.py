@@ -21,6 +21,11 @@ appear on their own lines.  Output columns:
 `metabolite` is the harmonised ID used by the other scripts (EX_ prefix and
 (e)/[e]/_e suffix stripped, '__' -> '_').  The script checks the number of rows
 (164 expected) and warns otherwise.
+
+The table's first column holds the current AGORA metabolite ID, but the reaction
+column still has some legacy IDs (D-glucose is "glc_D" in the first column and
+"EX_glc(e)" in the second; the models only have EX_glc_D(e)).  When the two
+disagree by more than letter case, the first column wins and a note is printed.
 """
 import re
 import subprocess
@@ -48,7 +53,12 @@ def extract(pdf: Path) -> pd.DataFrame:
     for line in text.splitlines():
         m = ROW.match(line)
         if m:
-            rows.append((cat, m.group(1), m.group(2), normalise_id(m.group(2)),
+            pdf_id, reaction = m.group(1), m.group(2)
+            metabolite = normalise_id(reaction)
+            if normalise_id(pdf_id).lower() != metabolite.lower():
+                print(f"NOTE: reaction {reaction} does not match table ID {pdf_id}; using {pdf_id}", file=sys.stderr)
+                metabolite = normalise_id(pdf_id)
+            rows.append((cat, pdf_id, reaction, metabolite,
                          m.group(3).strip(), float(m.group(4)), float(m.group(5))))
         elif line.strip() in SECTIONS:
             cat = line.strip()
