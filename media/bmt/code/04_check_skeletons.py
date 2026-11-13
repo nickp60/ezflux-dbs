@@ -23,8 +23,7 @@ E  Table 12 diets (agora_s12_*): every table compound is present, and
    skeleton flux / table value is either 1 (not diluted) or the diet's dilution factor
    (0.1, or 0.8 for *_bmt); the diluted set is identical in all Table 12 diets, and the *_bmt
    and base diets differ only by the factor 8 for diluted compounds
-W  IDs that none of the provided media contain (may be legitimate, e.g. custom-diet-only
-   compounds, but are worth a look)
+W  IDs that none of the provided media contain (may be legitimate, but are worth a look)
 """
 import argparse
 import re

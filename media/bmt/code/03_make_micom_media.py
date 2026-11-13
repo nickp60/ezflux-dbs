@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-# MICOM media from AGORA Table 12 and a VMH Diet Designer diet
+# MICOM media from AGORA Table 12
 #
 # Usage (from any folder):
 #     python 03_make_micom_media.py
 #
-# Follows the structure of data/inputs/vmh_high_fiber_reference.ipynb, applied to five diets at
+# Follows the structure of data/inputs/vmh_high_fiber_reference.ipynb, applied to four diets at
 # once (stacked in one long table with a `diet` column, so every step runs once):
 #
-#   * custom_diet: your Diet Designer export (mmol/day; duplicated reactions summed)
 #   * agora_s12_western, agora_s12_high_fiber: AGORA Supplementary Table 12 (mmol/gDW/h, from
 #     01_extract_s12_table.py)
 #   * agora_s12_western_bmt, agora_s12_high_fiber_bmt: the same two Table 12 diets, but absorbed
@@ -15,7 +14,7 @@
 #     tract that lets more nutrients reach the colon
 #
 # Steps: 1. floor very low values, 2. dilute metabolites absorbed in the small intestine
-# (Recon3D exchanges), 3. add mucin cores, primary bile acids, cellulose and O2, 4. save each
+# (Recon3D exchanges), 3. add mucin cores, primary bile acids and O2, 4. save each
 # skeleton to media_out/<diet>_skeleton.csv and sanity-check it with 04_check_skeletons.py.
 #
 # The skeletons are then completed and validated one diet at a time with 05_complete_medium.py
@@ -32,8 +31,7 @@ import pandas as pd
 from cobra.io import read_sbml_model
 
 root = Path(__file__).resolve().parent.parent
-dilutions = {"custom_diet": 0.2,
-             "agora_s12_western": 0.1, "agora_s12_high_fiber": 0.1,
+dilutions = {"agora_s12_western": 0.1, "agora_s12_high_fiber": 0.1,
              "agora_s12_western_bmt": 0.8, "agora_s12_high_fiber_bmt": 0.8}
 
 # --- Read the diets -------------------------------------------------------------------------------
@@ -48,28 +46,18 @@ s12 = pd.read_csv(root / "data/agora_s12_table12.csv")
 annotations = pd.concat([annotations, s12.loc[~s12.metabolite.isin(annotations.metabolite), ["metabolite", "name"]]])
 print("annotations:", annotations.shape)
 
-# custom diet: sum duplicated reactions, strip IDs, map Diet Designer names to AGORA names
-custom = pd.read_csv(root / "data/inputs/custom_diet_fluxes.csv").iloc[:, 0:2]
-custom.columns = ["reaction", "flux"]
-custom["metabolite"] = custom.reaction.str.replace("^EX_", "", regex=True).str.replace("\\[e\\]|\\(e\\)", "", regex=True)
-custom["metabolite"] = custom.metabolite.replace({"oleic": "ocdcea", "palmtl": "hdcea", "tedca": "ttdca",
-                                                   "xol": "chsterol", "occa": "octa", "4hpro_LT": "4hpro"})
-custom = custom.groupby("metabolite", as_index=False).flux.sum()
-
 # Table 12: one column per diet
 west = s12[["metabolite", "western"]].rename(columns={"western": "flux"})
 fiber = s12[["metabolite", "high_fiber"]].rename(columns={"high_fiber": "flux"})
 
-diet = pd.concat({"custom_diet": custom,
-                  "agora_s12_western": west, "agora_s12_high_fiber": fiber,
+diet = pd.concat({"agora_s12_western": west, "agora_s12_high_fiber": fiber,
                   "agora_s12_western_bmt": west, "agora_s12_high_fiber_bmt": fiber},
                  names=["diet"]).reset_index(level=0)
 diet.loc[diet.flux == 0, "flux"] = 1e-4  # bug in VMH designer where everything <1e-4 gets truncated to 0
 
 # --- Adjust for intestinal absorption -------------------------------------------------------------
-# Dilute every metabolite that has an exchange in the Recon3D human model. The factor is 0.2 for
-# the custom diet (as in the template), 0.1 for the Table 12 diets (the factor seen in
-# western_diet_gut_agora.qza) and 0.8 for the two _bmt variants (edit `dilutions` above to change
+# Dilute every metabolite that has an exchange in the Recon3D human model. The factor is 0.1 for the
+# Table 12 diets (the factor seen in western_diet_gut_agora.qza) and 0.8 for the two _bmt variants (edit `dilutions` above to change
 # any of them). Note this reproduces the provided Western medium only roughly: Recon3D has no
 # exchange for several ions and does have one for water.
 recon3 = read_sbml_model(root / "data/Recon3D.xml.gz")
@@ -83,8 +71,7 @@ diet["flux"] = diet["flux"] * diet["dilution"]
 print(diet.groupby("diet").dilution.value_counts())
 
 # --- Adding host supplied components --------------------------------------------------------------
-# Mucins, primary bile acids and a minuscule amount of oxygen, as in the template. Cellulose is set
-# to 0.1 for the custom diet only (Table 12 already has its own cellulose value).
+# Mucins, primary bile acids and a minuscule amount of oxygen, as in the template.
 diet.set_index(["diet", "metabolite"], inplace=True)
 
 for d in dilutions:
@@ -98,9 +85,6 @@ for d in dilutions:
 
     # anaerobic
     diet.loc[(d, "o2"), "flux"] = 0.001
-
-# fiber
-diet.loc[("custom_diet", "cellul"), "flux"] = 0.1
 
 diet.reset_index(inplace=True)
 diet["reaction"] = "EX_" + diet.metabolite + "(e)"

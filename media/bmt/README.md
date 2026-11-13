@@ -1,5 +1,7 @@
 # MICOM diet media: comparison, AGORA Table 12 reconciliation, and build scripts
 
+> The custom Diet Designer diet has been dropped from the build for now: scripts 03 and 05 and the benchmarking no longer use it, and its old `media_out/custom_diet_*` files are kept as `.bak`. `data/inputs/custom_diet_fluxes.csv` is still there. The text below about the custom diet describes the earlier analysis.
+
 Analysis for the Peled Lab of the micom-dev flux-modelling diets (`micom-dev/media`), a custom VMH Diet Designer diet, and the two diets in AGORA Supplementary Table 12 (Western, High fiber), plus two variants of the Table 12 diets with a less efficient upper GI tract (`_bmt`).
 
 ## 1. Files assessed
@@ -60,7 +62,7 @@ run_all.sh              runs 01 .. 09 in order (05 only if the model database is
 code/
   01_extract_s12_table.py      PDF -> data/agora_s12_table12.csv
   02_qza_to_csv.py             provided .qza media -> data/media_csv/*.csv
-  03_make_micom_media.py       build the five diet skeletons (CSV only; also runs 04)
+  03_make_micom_media.py       build the four diet skeletons (CSV only; also runs 04)
   04_check_skeletons.py        sanity checks for media_out/*_skeleton.csv
   05_complete_medium.py        complete + validate ONE skeleton (complete_db_medium, check_db_medium)
   benchmarking/                optional SLURM benchmark of the completion parameters (own README)
@@ -71,6 +73,7 @@ data/
   agora_s12_table12.csv        parsed Table 12 (164 rows)
   agora_metabolites_from_qza.csv   annotation table rebuilt by 03_make_micom_media.py
   Recon3D.xml.gz               human model, used for the absorbed-metabolite list
+  db_annotations.csv           exchange metabolites of the model database (how it was made: see below)
   media_csv/                   the 11 provided media as CSV (output of step 02)
   inputs/                      all files assessed (section 1)
 media_out/                     written by 03: <diet>_skeleton.csv; written by 05: <diet>_micom_medium.csv (completed)
@@ -88,11 +91,11 @@ Run the scripts from `code/` (or run `bash run_all.sh` from the archive root).
 
 **`02_qza_to_csv.py`** — `python 02_qza_to_csv.py ../data/inputs ../data/media_csv`. Extracts `data/medium.csv` from every `.qza` (no QIIME 2 needed) and strips upload-hash prefixes from the names.
 
-**`03_make_micom_media.py`** — `python 03_make_micom_media.py` (any folder); needs `cobra` and `data/Recon3D.xml.gz` (included). It follows the `vmh_high_fiber` template step by step, with five diets stacked in one table so each step runs once: `custom_diet`, `agora_s12_western`, `agora_s12_high_fiber`, and the two `_bmt` variants. The explanatory text of the earlier notebook is kept as comments. It writes `media_out/<diet>_skeleton.csv`, runs `04_check_skeletons.py` on them, and stops; completion is done by `05_complete_medium.py`, which needs `micom` and `data/agora201_refseq216_species_1.qza` (not included; place it in `data/`).
+**`03_make_micom_media.py`** — `python 03_make_micom_media.py` (any folder); needs `cobra` and `data/Recon3D.xml.gz` (included). It follows the `vmh_high_fiber` template step by step, with four diets stacked in one table so each step runs once: `agora_s12_western`, `agora_s12_high_fiber`, and the two `_bmt` variants. The explanatory text of the earlier notebook is kept as comments. It writes `media_out/<diet>_skeleton.csv`, runs `04_check_skeletons.py` on them, and stops; completion is done by `05_complete_medium.py`, which needs `micom` and `data/agora201_refseq216_species_1.qza` (not included; place it in `data/`).
 
-1. Sum duplicated reactions in the custom diet, map Diet Designer names to AGORA names (oleic→ocdcea, etc.), floor zeros to 1e-4.
-2. Dilute every metabolite with a Recon3D exchange: 0.2 for the custom diet (as in the template), 0.1 for the Table 12 diets (the factor seen in `western_diet_gut_agora`), and 0.8 for `agora_s12_western_bmt` and `agora_s12_high_fiber_bmt`, the same Table 12 diets with a less efficient upper GI tract so that more nutrients reach the colon. All are set in the `dilutions` dict in the first code cell.
-3. Add mucin cores, gchola/tchola and O2 0.001 to all five, and cellulose 0.1 to the custom diet only.
+1. Take the Table 12 values and floor zeros to 1e-4.
+2. Dilute every metabolite with a Recon3D exchange: 0.1 for the Table 12 diets (the factor seen in `western_diet_gut_agora`), and 0.8 for `agora_s12_western_bmt` and `agora_s12_high_fiber_bmt`, the same Table 12 diets with a less efficient upper GI tract so that more nutrients reach the colon. All are set in the `dilutions` dict in the first code cell.
+3. Add mucin cores, gchola/tchola and O2 0.001 to all four.
 4. Merge annotations, save `media_out/<diet>_skeleton.csv`, then `complete_db_medium` (growth 0.05, max_added_import 100, weights="mass") per diet, `check_db_medium`, and save `media_out/<diet>_micom_medium.csv`.
 
 Script 03 writes CSV only; QIIME 2 artifacts are not created. The annotation table is rebuilt from the provided media (`data/media_csv/`) and Table 12, since the template's `agora_metabolites.csv` is not available, so the merge is a left join (unannotated compounds keep an empty name).
@@ -108,6 +111,18 @@ Script 03 writes CSV only; QIIME 2 artifacts are not created. The annotation tab
 **`08_compare_s12_vs_micom.py`** — `python 08_compare_s12_vs_micom.py --s12-csv ../data/agora_s12_table12.csv --media-dir ../data/media_csv -o <outdir>`. Prints the 0.1 / 1 / 0 rule and the High-fiber/Western ratios by category, and saves the comparison figure and a CSV. It imports `07_compare_micom_media.py`, so keep the two together.
 
 **`09_estimate_energy.py`** — `python 09_estimate_energy.py <custom_fluxes.csv> <all_media_long.csv>`. Atwater-factor kcal estimate for a Diet Designer file; for the MICOM media it prints stored-value energy only as a scale check (see its docstring).
+
+**`data/db_annotations.csv`** — the exchange reactions of the model database `data/agora201_refseq216_species_1.qza` (1746 species-level models), one row per reaction: 846 rows, with the metabolite, its name, molecular weight, C and N counts, and cross-references (BiGG, BioCyc, ChEBI, HMDB, InChI, KEGG, LIPID MAPS, MetaNetX, PubChem, Reactome, SEED, SMILES). It is not read by any script; it is the reference for checking whether a diet compound exists in the database. It was generated once, with micom, by:
+
+```python
+from micom.batch.db_media import db_annotations   # or micom.workflows.db_media, depending on the micom version
+anns = db_annotations("data/agora201_refseq216_species_1.qza", threads=1)
+anns.to_csv("db_annotations.csv")
+```
+
+The `reaction` column holds the exchange IDs as the models name them, and `complete_db_medium` matches a medium to the models on exactly these IDs (our `global_id` column), silently ignoring any that are missing. Compare a skeleton against it with `skel.global_id.isin(anns.reaction)`. Things found this way: (1) all IDs have the form `EX_<id>(e)` except `EX_Lkynr[e]`, `EX_icit[e]`, `EX_gly(e)_II`, `EX_thm(e)_II` and `EX_orn(e)_II`; (2) compounds in Table 12 and the provided AGORA 1.03 media that this database does not have, with no renamed equivalent: `hdcea`, `octa`, `arach`, `arachd`, `ascb_L`, `caro`, `10fthf`, `retinol`, `phyQ`, `fe3dcit`, `pro_D`, `asp_D` and the mucin `core2_rl`, `core4_rl`, `gncore1_rl`, `gncore2_rl`; (3) the database uses `4hpro_LT`, not `4hpro`. Regenerate it if the database changes.
+
+**D-amino acids in a Diet Designer export (for when the custom diet is added back).** In `custom_diet_fluxes.csv` every `ala_D`, `asp_D` and `pro_D` value is identical to an `ala_L`, `asp_L` or `pro_L` value, so they are mirror copies, not extra food. Keep the entry that matches the database and do not sum the two: that is the L form for aspartate and proline (the database has no `asp_D` or `pro_D`). `glc_D` and `sbt_D` are real D-sugars with no L form and are kept.
 
 **What was run here.** Script 03 (the former notebook) was run and reproduces the committed skeleton CSVs exactly. Steps 05 and 06 were only tested against a stand-in for micom, because `micom` and the model database were not available here, so the comparison in `results/` uses the skeleton CSVs. After running step 05 for every skeleton, run step 07 again (or `run_all.sh`) to use the completed media; step 07 warns when it is given skeletons, and `run_all.sh` passes `--require-completed`, which makes it stop instead. Using the Recon3D exchange list reproduces the 0.1 / x1 split of the provided Western medium for only about 80% of Table 12 compounds (for example Recon3D has no exchange for several ions, and has one for water, which the provided medium leaves undiluted); the provided medium is what the MICOM authors made, so treat the Table 12 diets here as a close but not exact rebuild.
 
