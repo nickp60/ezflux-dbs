@@ -6,17 +6,18 @@ content.
 
 Usage
 -----
-    python 04_compare_micom_media.py  ../data/media_csv ../media_out/*_micom_medium.csv \
+    python 07_compare_micom_media.py  ../data/media_csv ../media_out/*_micom_medium.csv \
         -o ../results/comparison_all_diets
 
 Inputs are MICOM medium CSV files (columns include global_id, flux) and/or directories of
 them: the provided media converted by 02_qza_to_csv.py (data/media_csv/) and the media
-written by 03_make_micom_media.ipynb (media_out/<diet>_micom_medium.csv, or the
-<diet>_skeleton.csv written before completion).  The diet name is the file name without
+completed by 05_complete_medium.py (media_out/<diet>_micom_medium.csv; the
+<diet>_skeleton.csv written by 03_make_micom_media.py is accepted but gives a warning, or an
+error with --require-completed).  The diet name is the file name without
 the "_micom_medium" / "_skeleton" suffix.  Two optional extra inputs:
   --fluxes-csv  a raw VMH Diet Designer export (reaction, flux in mmol/(human*day));
                 duplicated reactions are summed.  May be repeated.
-  --s12-csv     the CSV from extract_s12_table.py; adds agora_s12_western and
+  --s12-csv     the CSV from 01_extract_s12_table.py; adds agora_s12_western and
                 agora_s12_high_fiber exactly as tabulated (mmol/gDW/h).  Do not combine
                 with notebook output of the same names.
 
@@ -31,7 +32,7 @@ scale.  What is known:
     vmh_high_fiber_reference.ipynb): 0.2 dilution of compounds in Recon3D, plus
     mucin/bile-acid/cellulose/O2 additions and a completion step.  The notebook
     reads a pre-made .tsv, so any /24 conversion would happen upstream and is
-    not visible.  Energy check (estimate_energy.py): undiluted starch in
+    not visible.  Energy check (09_estimate_energy.py): undiluted starch in
     vmh_eu_average is ~1/20 of the custom diet's, i.e. consistent with /24 of a
     ~2000 kcal diet, but its non-starch compounds are not.  Scale: unverified.
   * himalaya / guerrero_mountains / baobab_honey_antelope: unverified.
@@ -210,7 +211,7 @@ def read_fluxes_csv(path: Path) -> pd.DataFrame:
 
 
 def read_s12_csv(path: Path) -> dict:
-    """CSV from extract_s12_table.py -> {diet name: DataFrame(metabolite, flux, name)}."""
+    """CSV from 01_extract_s12_table.py -> {diet name: DataFrame(metabolite, flux, name)}."""
     t = pd.read_csv(path)
     out = {}
     for col, nm in [("western", "agora_s12_western"), ("high_fiber", "agora_s12_high_fiber")]:
@@ -436,8 +437,20 @@ def main():
     ap.add_argument("--fluxes-csv", action="append", default=[], metavar="CSV[:NAME]",
                     help="extra diet in VMH Diet Designer format (reaction, flux in mmol/(human*day)); "
                          "duplicates are summed; kept in mmol/day. May be repeated.")
-    ap.add_argument("--s12-csv", default=None, help="CSV from extract_s12_table.py (adds the two AGORA S12 diets)")
+    ap.add_argument("--s12-csv", default=None, help="CSV from 01_extract_s12_table.py (adds the two AGORA S12 diets)")
+    ap.add_argument("--require-completed", action="store_true",
+                    help="exit with an error if any input is a <diet>_skeleton.csv instead of a completed "
+                         "<diet>_micom_medium.csv (from 05_complete_medium.py)")
     args = ap.parse_args()
+
+    # skeletons are the diet before completion; comparing them looks fine but is not the medium MICOM uses
+    given = [f for i in args.inputs for f in ([Path(i)] if Path(i).is_file() else sorted(Path(i).glob("*.csv")))]
+    skeletons = [f.name for f in given if f.stem.endswith("_skeleton")]
+    if skeletons:
+        msg = f"{len(skeletons)} input(s) are skeletons, not completed media (run 05_complete_medium.py): {skeletons}"
+        if args.require_completed:
+            sys.exit("ERROR: " + msg)
+        print("WARNING: " + msg, file=sys.stderr)
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="white", context="notebook")

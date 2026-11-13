@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Sanity checks for the skeleton media written by notebooks/03_make_micom_media.ipynb
+Sanity checks for the skeleton media written by 03_make_micom_media.py
 (media_out/<diet>_skeleton.csv), to be run BEFORE the slow complete_db_medium step.
 
 Usage
 -----
-    python 07_check_skeletons.py ../media_out/*_skeleton.csv \
+    python 04_check_skeletons.py ../media_out/*_skeleton.csv \
         --media-dir ../data/media_csv --s12-csv ../data/agora_s12_table12.csv
 
 Exit status is 1 if any check fails, so it can be used in run_all.sh or CI.

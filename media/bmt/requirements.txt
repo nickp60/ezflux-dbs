@@ -7,6 +7,6 @@ pdfplumber
 nbformat
 nbconvert
 ipykernel
-# for notebooks/03_make_micom_media.ipynb: cobra, micom, plus data/agora201_refseq216_species_1.qza
+# for 03_make_micom_media.py: cobra; for 05_complete_medium.py: micom, plus data/agora201_refseq216_species_1.qza
 # (no QIIME 2 is needed: all media are read and written as CSV)
 # system tool: pdftotext (poppler-utils)
