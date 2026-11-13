@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Runs the scripts in execution order (01 .. 09).  Run from this folder:  bash run_all.sh
 #
-#   01 extract Table 12 from the PDF          06 benchmark completion parameters (NOT run here,
-#   02 provided .qza media -> CSV                 it is slow; run it yourself, see the README)
+#   01 extract Table 12 from the PDF          (code/benchmarking: optional SLURM benchmark,
+#   02 provided .qza media -> CSV                 not run here; see its README)
 #   03 build skeletons (also runs 04)         07 compare the completed media
 #   04 check skeletons                        08 Table 12 vs the provided media
 #   05 complete + validate each skeleton      09 energy estimate
