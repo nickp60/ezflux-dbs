@@ -19,7 +19,7 @@
 # skeleton to media_out/<diet>_skeleton.csv and sanity-check it with 04_check_skeletons.py.
 #
 # The skeletons are then completed and validated one diet at a time with 05_complete_medium.py
-# (complete_db_medium, check_db_medium); 06_benchmarking_media_params.py compares completion
+# (complete_db_medium, check_db_medium); 06_benchmarking_media_params.sh (a SLURM job array) compares completion
 # parameters.
 #
 # Needs cobra and data/Recon3D.xml.gz here; micom and data/agora201_refseq216_species_1.qza are
@@ -137,4 +137,4 @@ subprocess.run([sys.executable, str(root / "code/04_check_skeletons.py"), *skele
 #
 # To compare several `weights` and `max_added_import` settings use
 #
-#     python 06_benchmarking_media_params.py ../media_out/*_skeleton.csv
+#     bash 06_benchmarking_media_params.sh ../media_out/*_skeleton.csv
