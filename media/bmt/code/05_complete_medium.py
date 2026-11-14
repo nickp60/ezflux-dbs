@@ -28,6 +28,11 @@ Parameters
                         (can be slow)
 --max-added-import      largest import (mmol/gDW/h) completion may add per compound
 --growth                growth rate every taxon must reach (default 0.05)
+--o2                    import of oxygen (mmol/gDW/h) for this run, replacing the "o2" row of the
+                        skeleton (03_make_micom_media.py sets 0.001).  Default: keep the skeleton's
+                        value.  When given, oxygen is also made strict in complete_db_medium, so
+                        completion cannot raise it above this value (otherwise it could, up to
+                        --max-added-import, and the export would then drop the extra).
 --threads               worker processes
 --model-db              model database .qza (default ../data/agora201_refseq216_species_1.qza)
 
@@ -54,8 +59,10 @@ def main():
     ap.add_argument("skeleton", help="media_out/<diet>_skeleton.csv")
     ap.add_argument("--weights", default="mass", help='"mass", an element like "C", or "None" (default: mass)')
     ap.add_argument("--minimize-components", action="store_true", help="minimise the number of added compounds")
-    ap.add_argument("--max-added-import", type=float, default=5.0)
+    ap.add_argument("--max-added-import", type=float, default=5)
     ap.add_argument("--growth", type=float, default=0.001)
+    ap.add_argument("--o2", type=float, default=None,
+                    help='oxygen import for this run (default: keep the skeleton\'s "o2" flux)')
     ap.add_argument("--threads", type=int, default=12)
     ap.add_argument("--model-db", default=str(here / "../data/agora201_refseq216_species_1.qza"))
     ap.add_argument("--media-dir", default=str(here / "../data/media_csv"))
@@ -69,6 +76,13 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
 
     skel = pd.read_csv(args.skeleton)
+    strict = []
+    if args.o2 is not None:
+        is_o2 = skel.metabolite == "o2"
+        if not is_o2.any():
+            raise SystemExit(f"--o2 given but {args.skeleton} has no 'o2' row")
+        skel.loc[is_o2, "flux"] = args.o2
+        strict = skel.loc[is_o2, "global_id"].tolist()  # completion must not raise oxygen
 
     # annotation table for the added compounds (same as in 03_make_micom_media.py)
     media = [pd.read_csv(f) for f in sorted(Path(args.media_dir).glob("*.csv"))]
@@ -82,7 +96,8 @@ def main():
     t0 = time.time()
     manifest, imports = complete_db_medium(str(args.model_db), skel, growth=args.growth, threads=args.threads,
                                            max_added_import=args.max_added_import,
-                                           minimize_components=args.minimize_components, weights=weights)
+                                           minimize_components=args.minimize_components, weights=weights,
+                                           strict=strict)
     complete_s = time.time() - t0
     print(diet, manifest.can_grow.value_counts().to_dict())
 
@@ -120,6 +135,7 @@ def main():
         "minimize_components": args.minimize_components,
         "max_added_import": args.max_added_import,
         "growth": args.growth,
+        "o2": float(skel.loc[skel.metabolite == "o2", "flux"].iloc[0]) if (skel.metabolite == "o2").any() else None,
         "n_taxa": int(len(manifest)),
         "n_can_grow_completion": int(manifest.can_grow.sum()),
         "n_grow_check": int((gr >= args.growth - 1e-6).sum()),

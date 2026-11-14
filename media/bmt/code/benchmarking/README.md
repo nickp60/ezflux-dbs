@@ -6,10 +6,11 @@ results. Not part of `run_all.sh` (it is slow and optional).
 ## Files
 
 - `params.txt`: one line per run. Each line is the argument string for `05_complete_medium.py`:
-  the skeleton CSV, `--weights` or `--minimize-components`, `--max-added-import`, and
-  `--out-dir` (one folder per run). Paths are relative to this folder. The default file has 32
-  lines: two diets (`agora_s12_high_fiber_bmt`, `agora_s12_western_bmt`) x 16 conditions
-  (`weights` mass, None and C, each at caps 0.5, 1, 4 and 10, plus `--minimize-components` at each cap).
+  the skeleton CSV, `--weights` or `--minimize-components`, `--max-added-import`, `--growth`,
+  `--o2` and `--out-dir` (one folder per run). Paths are relative to this folder. The default file
+  has 240 lines, all on `agora_s12_western`: growth 0.001, 0.005, 0.01, 0.05 x O2 0, 0.001, 0.1 x
+  five methods (`--minimize-components`, `--weights` None, mass, C, N) x `--max-added-import`
+  0.5, 1, 5, 10. Run folders are named `growth-<g>_o2-<o>_<method>_cap-<c>`.
 - `benchmarking.sh`: runs line N of `params.txt`, where N is `SLURM_ARRAY_TASK_ID`, through
   `05_complete_medium.py` with `--threads` set to the cores SLURM gave the task. Defaults, set in
   the `#SBATCH` lines at the top: at most 20 tasks at once, 1 core, 8 GB, 8 hours per task.
@@ -30,10 +31,11 @@ python report.py
 ```
 
 Each run writes `<diet>_micom_medium.csv`, `<diet>_medium_check.pkl` and `<diet>_run_summary.json`
-to its own folder under `results/benchmark_media/<diet>/<condition>/`, so `media_out/` is
+to its own folder under `results/benchmark_media/<diet>/<condition>/` (`<condition>` as above), so `media_out/` is
 untouched. Task logs are `benchmark_<jobid>_<task>.out` in this folder.
 
-The report has one row per finished run: taxa that can grow, growth-rate statistics from
+The report has one row per finished run: its parameters (growth, o2, weights, minimize_components,
+max_added_import), taxa that can grow, growth-rate statistics from
 `check_db_medium`, added compounds, added flux (mmol/gDW/h), the skeleton's flux, added flux as a
 percentage of it, and run times in seconds (`complete_s`, `check_s`, `total_s`). A run without a
 summary failed or has not finished; read its log. `report.py` prints how many of the lines in
@@ -41,8 +43,22 @@ summary failed or has not finished; read its log. `report.py` prints how many of
 
 ## Changing the runs
 
+- Regenerate the grid (bash; edit the lists to change it):
+  ```
+  d=agora_s12_western
+  for g in 0.001 0.005 0.01 0.05; do for o in 0 0.001 0.1; do
+   for m in "mincomp:--minimize-components" "weights-None:--weights None" "weights-mass:--weights mass" "weights-C:--weights C" "weights-N:--weights N"; do
+    for c in 0.5 1 5 10; do n=${m%%:*}; a=${m#*:}
+     echo "../../media_out/${d}_skeleton.csv $a --max-added-import $c --growth $g --o2 $o --out-dir ../../results/benchmark_media/$d/growth-${g}_o2-${o}_${n}_cap-${c}"
+   done; done; done; done > params.txt
+  ```
+- Oxygen: `--o2` replaces the `o2` flux of the skeleton for that run (03 sets 0.001) and makes oxygen
+  strict in `complete_db_medium`, so completion cannot raise it above the value given. Runs without
+  `--o2` use the skeleton's value and the old non-strict behaviour, so they are not directly
+  comparable with runs that have it.
+
 - Edit or add lines in `params.txt`, then set the array size to the number of lines:
-  `sbatch --array=1-N%20 benchmarking.sh` (the `#SBATCH --array=1-32%20` line only fits the default file).
+  `sbatch --array=1-N%20 benchmarking.sh` (the `#SBATCH --array=1-240%20` line only fits the default file).
 - Run one line again: `sbatch --array=7 benchmarking.sh`.
 - Different limits: pass them to `sbatch`, for example `sbatch --mem=16G --time=24:00:00 benchmarking.sh`
   (command-line options override the `#SBATCH` lines). `--minimize-components` runs may need more time.
