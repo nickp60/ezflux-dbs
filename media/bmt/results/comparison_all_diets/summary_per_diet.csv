@@ -1,0 +1,16 @@
+diet,unit_group,n_components,total_flux,median_flux,max_flux,water_flux,unclassified_components
+agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),223,52.75100492585,0.0899827,1.0,1.0,2.0
+agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),213,114.48416515185001,0.8,8.0,8.0,1.0
+agora_s12_western,MICOM per-biomass (mmol/gDW/h),219,53.233611121850004,0.1,1.0,1.0,2.0
+agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),212,117.53250626585,0.8,8.0,8.0,1.0
+baobab_honey_antelope,Other diets (units unverified),178,3143.573473020214,0.13770595160294155,2907.1116968091533,2907.1116968091533,0.0
+breast_milk_agora,MICOM per-biomass (mmol/gDW/h),182,83.30341510432878,0.0107086765,38.88888888888889,0.8172201608333348,0.0
+guerrero_mountains,Other diets (units unverified),181,5076.04703670693,0.10808928,4832.353155166292,4832.353155166292,0.0
+himalaya,Other diets (units unverified),169,6969.376059927533,0.114354,6601.85818994889,6601.85818994889,0.0
+vmh_eu_average_agora,VMH-derived (scale unverified),142,33994.892427957806,0.060512581726627546,33178.468500073206,33178.468500073206,0.0
+vmh_fermented_agora,VMH-derived (scale unverified),146,38409.79069985896,0.1100701319979301,37762.0553219268,37762.0553219268,0.0
+vmh_formula_agora,VMH-derived (scale unverified),216,176.07094968418053,0.01275633608333325,51.58287853422205,51.58287853422205,0.0
+vmh_high_fat_low_carb_agora,VMH-derived (scale unverified),122,6729.686612938922,0.0003185038,6608.413339491083,6608.413339491083,0.0
+vmh_high_fiber_agora,VMH-derived (scale unverified),143,37023.898214652385,0.0848912167606768,36334.2673552674,36334.2673552674,0.0
+western_diet_gut_agora,MICOM per-biomass (mmol/gDW/h),171,30.37182063670278,0.1,10.0,10.0,0.0
+western_diet_gut_carveme,MICOM per-biomass (mmol/gDW/h),120,28.40297944,0.1,10.0,10.0,0.0

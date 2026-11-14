@@ -1,0 +1,29 @@
+
+=== custom diet, strch1=11, strch2=3 residues: 2093 kcal/day, 410 g/day
+type      starch    fat   carb  alcohol  protein  SCFA
+g_day      223.0   75.0   46.0     26.0     38.0   1.0
+kcal_day   894.0  674.0  185.0    184.0    152.0   4.0
+  excluding D-amino-acid duplicates: 2069 kcal
+
+=== custom diet, strch1=12, strch2=4 residues: 2275 kcal/day, 455 g/day
+type      starch    fat   carb  alcohol  protein  SCFA
+g_day      269.0   75.0   46.0     26.0     38.0   1.0
+kcal_day  1075.0  674.0  185.0    184.0    152.0   4.0
+  excluding D-amino-acid duplicates: 2250 kcal
+
+=== every medium as stored (see docstring caveat); starch residues 12/4
+agora_s12_high_fiber           total        1   starch       0   non-starch        1
+agora_s12_high_fiber_bmt       total        9   starch       0   non-starch        8
+agora_s12_western              total        2   starch       0   non-starch        2
+agora_s12_western_bmt          total       13   starch       2   non-starch       11
+baobab_honey_antelope          total       63   starch       2   non-starch       61
+breast_milk_agora              total       58   starch       0   non-starch       58
+guerrero_mountains             total       50   starch       3   non-starch       47
+himalaya                       total      100   starch      16   non-starch       83
+vmh_eu_average_agora           total      362   starch      52   non-starch      310
+vmh_fermented_agora            total      312   starch      57   non-starch      256
+vmh_formula_agora              total      119   starch       0   non-starch      119
+vmh_high_fat_low_carb_agora    total       74   starch       0   non-starch       74
+vmh_high_fiber_agora           total      333   starch      71   non-starch      263
+western_diet_gut_agora         total        3   starch       2   non-starch        1
+western_diet_gut_carveme       total        1   starch       0   non-starch        1

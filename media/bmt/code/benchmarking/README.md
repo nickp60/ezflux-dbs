@@ -59,7 +59,7 @@ summary failed or has not finished; read its log. `report.py` prints how many of
 
 - Edit or add lines in `params.txt`, then set the array size to the number of lines:
   `sbatch --array=1-N%20 benchmarking.sh` (the `#SBATCH --array=1-240%20` line only fits the default file).
-- Run one line again: `sbatch --array=7 benchmarking.sh`.
+- Resubmitting is safe: a run whose `<diet>_run_summary.json` already exists is skipped (the task log says so), so after a failure or timeout `sbatch benchmarking.sh` only does the missing runs. To redo finished runs, use `sbatch --export=ALL,FORCE=1 benchmarking.sh`, or delete their folders. Run one line: `sbatch --array=7 benchmarking.sh` (add `FORCE=1` if it already finished).
 - Different limits: pass them to `sbatch`, for example `sbatch --mem=16G --time=24:00:00 benchmarking.sh`
   (command-line options override the `#SBATCH` lines). `--minimize-components` runs may need more time.
 - Test one line without SLURM, from this folder:

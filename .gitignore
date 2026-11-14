@@ -1,2 +1,6 @@
 *~
 *.DS_Store
+data/benchmarking/log*
+media/*/data/benchmarking/log*
+media/bmt/data/benchmarking/log*
+*.ipynb_checkpoints*

@@ -63,7 +63,7 @@ def main():
     ap.add_argument("--growth", type=float, default=0.001)
     ap.add_argument("--o2", type=float, default=None,
                     help='oxygen import for this run (default: keep the skeleton\'s "o2" flux)')
-    ap.add_argument("--threads", type=int, default=12)
+    ap.add_argument("--threads", type=int, default=1)
     ap.add_argument("--model-db", default=str(here / "../data/agora201_refseq216_species_1.qza"))
     ap.add_argument("--media-dir", default=str(here / "../data/media_csv"))
     ap.add_argument("--s12-csv", default=str(here / "../data/agora_s12_table12.csv"))

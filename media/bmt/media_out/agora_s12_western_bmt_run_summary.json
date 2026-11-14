@@ -1,0 +1,22 @@
+{
+  "diet": "agora_s12_western_bmt",
+  "weights": "mass",
+  "minimize_components": false,
+  "max_added_import": 5,
+  "growth": 0.001,
+  "o2": 0.001,
+  "n_taxa": 1746,
+  "n_can_grow_completion": 1746,
+  "n_grow_check": 1735,
+  "growth_rate_min": 5.5480412399637725e-05,
+  "growth_rate_q25": 0.040473336891030456,
+  "growth_rate_median": 0.10321502783752524,
+  "growth_rate_mean": 0.20789718935347665,
+  "growth_rate_max": 4.549805299399304,
+  "n_added_compounds": 32,
+  "skeleton_flux": 117.08626949,
+  "added_flux": 0.44623969209321857,
+  "added_pct_of_skeleton": 0.381120428583926,
+  "complete_s": 1295.4554812908173,
+  "check_s": 1135.330766916275
+}
