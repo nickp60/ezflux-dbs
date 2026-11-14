@@ -6,7 +6,8 @@ Usage (from this folder, after the array jobs have finished)
     python report.py [../../results/benchmark_media]
 
 Reads <results>/<diet>/<condition>/<diet>_run_summary.json and writes benchmark_report.csv and
-benchmark_report.md to <results>.  One row per finished condition: taxa that can grow, growth-rate
+benchmark_report.md to <results>.  One row per finished condition: its parameters (growth, o2,
+weights, minimize_components, max_added_import), taxa that can grow, growth-rate
 statistics from check_db_medium, added compounds, added flux (mmol/gDW/h), the skeleton's flux,
 added flux as % of it, and run times in seconds (complete_s, check_s, total_s).  A condition
 without a summary failed or has not finished; look in its benchmark_<jobid>_<task>.out log.
@@ -26,8 +27,9 @@ for f in sorted(results.glob("*/*/*_run_summary.json")):
     row["condition"] = f.parent.name
     row["total_s"] = row["complete_s"] + row["check_s"]
     rows.append(row)
-report = pd.DataFrame(rows).drop(columns=["weights", "minimize_components", "max_added_import", "growth"])
-report = report[["diet", "condition"] + [c for c in report.columns if c not in ("diet", "condition")]]
+report = pd.DataFrame(rows)
+params = ["growth", "o2", "weights", "minimize_components", "max_added_import"]
+report = report[["diet", "condition"] + params + [c for c in report.columns if c not in ["diet", "condition"] + params]]
 report.to_csv(results / "benchmark_report.csv", index=False)
 
 table = report.copy()
