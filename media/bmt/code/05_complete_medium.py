@@ -33,6 +33,14 @@ Parameters
                         value.  When given, oxygen is also made strict in complete_db_medium, so
                         completion cannot raise it above this value (otherwise it could, up to
                         --max-added-import, and the export would then drop the extra).
+--cofactor-max-flux     upper limit (mmol/gDW/h) for the rows of Table 12's "Minerals, vitamins, other"
+                        category that carry carbon (vitamins, B12 forms, quinones, hemes, nucleosides,
+                        meso-DAP, ...).  Table 12 gives them all 1.0, which makes them a major carbon
+                        source.  Each such row gets min(skeleton flux, LIMIT); 0 closes them.  Water and
+                        methanol (solvents, left in excess) and the carbon-free ions and gases
+                        (see INORGANIC below) are never changed.  The limited rows are strict in
+                        complete_db_medium, so completion cannot raise them again.  Default: no limit.
+--cofactor-include-inorganic  also apply the limit to the carbon-free rows (ions, gases)
 --threads               worker processes
 --model-db              model database .qza (default ../data/agora201_refseq216_species_1.qza)
 
@@ -53,6 +61,24 @@ from micom.batch.db_media import check_db_medium, complete_db_medium
 
 here = Path(__file__).resolve().parent
 
+COFACTOR_CATEGORY = "Minerals, vitamins, other"
+# Rows of that category that --cofactor-max-flux never touches: solvents left in excess, and the
+# metabolites without carbon (limiting them tests mineral requirements, not carbon supply).
+SOLVENTS = {"h2o", "meoh"}
+INORGANIC = {"ca2", "cl", "cobalt2", "cu2", "fe2", "fe3", "h", "h2", "h2s", "k", "mg2", "mn2", "mobd",
+             "na1", "no2", "no3", "pi", "sel", "so4", "zn2"}
+
+
+def limit_cofactors(skel, s12, limit, include_inorganic=False):
+    """Cap the flux of the cofactor rows at `limit`; returns (skeleton, metabolite ids that were limited)."""
+    cof = set(s12.loc[s12.table_category == COFACTOR_CATEGORY, "metabolite"]) - SOLVENTS
+    if not include_inorganic:
+        cof -= INORGANIC
+    skel = skel.copy()
+    rows = skel.metabolite.isin(cof)
+    skel.loc[rows, "flux"] = skel.loc[rows, "flux"].clip(upper=limit)
+    return skel, skel.loc[rows, "global_id"].tolist()
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -63,6 +89,10 @@ def main():
     ap.add_argument("--growth", type=float, default=0.001)
     ap.add_argument("--o2", type=float, default=None,
                     help='oxygen import for this run (default: keep the skeleton\'s "o2" flux)')
+    ap.add_argument("--cofactor-max-flux", type=float, default=None,
+                    help="limit for the carbon-bearing 'Minerals, vitamins, other' rows (default: no limit)")
+    ap.add_argument("--cofactor-include-inorganic", action="store_true",
+                    help="also limit the carbon-free rows (ions, gases); water and methanol never change")
     ap.add_argument("--threads", type=int, default=1)
     ap.add_argument("--model-db", default=str(here / "../data/agora201_refseq216_species_1.qza"))
     ap.add_argument("--media-dir", default=str(here / "../data/media_csv"))
@@ -83,6 +113,15 @@ def main():
             raise SystemExit(f"--o2 given but {args.skeleton} has no 'o2' row")
         skel.loc[is_o2, "flux"] = args.o2
         strict = skel.loc[is_o2, "global_id"].tolist()  # completion must not raise oxygen
+
+    n_cofactors = 0
+    if args.cofactor_max_flux is not None:
+        s12_table = pd.read_csv(args.s12_csv)
+        skel, cof_ids = limit_cofactors(skel, s12_table, args.cofactor_max_flux, args.cofactor_include_inorganic)
+        strict = strict + cof_ids
+        n_cofactors = len(cof_ids)
+        print(f"{n_cofactors} cofactor rows limited to <= {args.cofactor_max_flux:g}; "
+              f"skeleton flux is now {skel.flux.sum():.2f}")
 
     # annotation table for the added compounds (same as in 03_make_micom_media.py)
     media = [pd.read_csv(f) for f in sorted(Path(args.media_dir).glob("*.csv"))]
@@ -136,6 +175,8 @@ def main():
         "max_added_import": args.max_added_import,
         "growth": args.growth,
         "o2": float(skel.loc[skel.metabolite == "o2", "flux"].iloc[0]) if (skel.metabolite == "o2").any() else None,
+        "cofactor_max_flux": args.cofactor_max_flux,
+        "n_cofactor_rows_limited": n_cofactors,
         "n_taxa": int(len(manifest)),
         "n_can_grow_completion": int(manifest.can_grow.sum()),
         "n_grow_check": int((gr >= args.growth - 1e-6).sum()),
