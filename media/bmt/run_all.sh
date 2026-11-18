@@ -19,7 +19,7 @@ python 03_make_micom_media.py
 
 if [ -f ../data/agora201_refseq216_species_1.qza ]; then
     for skeleton in ../media_out/*_skeleton.csv; do
-        python 05_complete_medium.py "$skeleton" --threads 1
+        python 05_complete_medium.py "$skeleton" --threads 1 --weights mass --max-added-import 5 --o2 .001 --cofactor-max-flux .001 --threads 1
     done
 else
     echo "data/agora201_refseq216_species_1.qza not found: skipping step 05"

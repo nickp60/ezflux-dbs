@@ -1,8 +1,8 @@
 diet,unit_group,n_components,total_flux,median_flux,max_flux,water_flux,unclassified_components
-agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),223,52.75100492585,0.0899827,1.0,1.0,2.0
-agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),213,114.48416515185001,0.8,8.0,8.0,1.0
-agora_s12_western,MICOM per-biomass (mmol/gDW/h),219,53.233611121850004,0.1,1.0,1.0,2.0
-agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),212,117.53250626585,0.8,8.0,8.0,1.0
+agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),240,33.48875237565,0.001832045,1.0,1.0,10.0
+agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),231,59.88338570055,0.00294357,8.0,8.0,9.0
+agora_s12_western,MICOM per-biomass (mmol/gDW/h),238,34.00122176165,0.001,1.0,1.0,10.0
+agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),228,62.92518050705,0.00199487,8.0,8.0,9.0
 baobab_honey_antelope,Other diets (units unverified),178,3143.573473020214,0.13770595160294155,2907.1116968091533,2907.1116968091533,0.0
 breast_milk_agora,MICOM per-biomass (mmol/gDW/h),182,83.30341510432878,0.0107086765,38.88888888888889,0.8172201608333348,0.0
 guerrero_mountains,Other diets (units unverified),181,5076.04703670693,0.10808928,4832.353155166292,4832.353155166292,0.0

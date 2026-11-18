@@ -1,14 +1,14 @@
 metabolite,flux,name,diet,unit_group,class
-26dap_M,1.0,"meso-2,6-Diaminoheptanedioate",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-ala_D,0.1,D-alanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+26dap_M,0.001,"meso-2,6-Diaminoheptanedioate",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+ala_D,0.001,D-alanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 ala_L,0.1,L-alanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 arg_L,0.015,L-argininium(1+),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 asn_L,0.0225,L-asparagine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 asp_L,0.0225,L-aspartate(1-),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-cgly,0.1,L-cysteinylglycine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+cgly,0.001,L-cysteinylglycine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 cys_L,0.1,L-cysteine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 gln_L,0.018,L-glutamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-glu_D,1.0,D-Glutamate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+glu_D,0.001,D-Glutamate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 glu_L,0.018,L-glutamate(1-),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 gly,0.045,Glycine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 his_L,0.015,L-histidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -16,13 +16,13 @@ ile_L,0.015,L-isoleucine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Ami
 leu_L,0.015,L-leucine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 lys_L,0.015,L-lysinium(1+),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 met_L,0.018,L-methionine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-metsox_S_L,1.0,L-Methionine Sulfoxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-orn,0.1,Ornithine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+metsox_S_L,0.001,L-Methionine Sulfoxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+orn,0.001,Ornithine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 phe_L,0.1,L-phenylalanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 pro_L,0.018,L-proline,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-ptrc,0.1,Putrescine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+ptrc,0.001,Putrescine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 ser_L,0.1,L-serine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
-spmd,0.1,Spermidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
+spmd,0.001,Spermidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 thr_L,0.0225,L-threonine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 trp_L,0.00818182,L-tryptophan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
 tyr_L,0.1,L-tyrosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -34,6 +34,7 @@ arabinogal,0.0004855,Larch arabinogalactan,agora_s12_high_fiber,MICOM per-biomas
 arabinoxyl,0.00679348,Arabinoxylan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 cellul,0.000625,"Cellulose, chain length 500 glc_D assumed, DOI: 10.1002/anie.200460587",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 dextran40,0.00390625,"Dextran 40, 1,6-alpha-D-",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+dextrin,0.00412413,Dextrin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 galmannan,0.0003125,Carob galactomannan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 glcmannan,0.00072844,Konjac glucomannan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 inulin,0.0104167,"Chicory inulin, 30 monosaccharide units (29 fru, 1 glc) on average",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
@@ -41,7 +42,8 @@ kestopt,0.0625,Kestopentaose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h)
 levan1000,0.0003125,"Levan, 1000 fructose units",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 lichn,0.00183824,Lichenin from Icelandic,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 lmn30,0.0104167,Laminarin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
-malthx,0.00298641,Maltohexaose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+malthx,0.00298924,Maltohexaose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+mantr,0.00992942,"mannotriose (beta-1,4)",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 pect,7.3964e-05,pectins,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 pullulan1200,0.00026042,"pullulan (n=1200 repeat units, alpha-1,4 and alph-1,6 bounds)",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 rhamnogalurI,0.00032106,Potato,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
@@ -50,23 +52,24 @@ starch1200,0.00026042,"starch n=1200 repeat units (300 repeat units amylose, 900
 strch1,0.00681818,"starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xylan,0.00071023,"Oat spelt xylan, MW 79200 (DOI: 10.1002/masy.200551405) = 528 xyl_D",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xyluglc,0.00029124,Xyluglucan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
-12dgr180,1.0,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+12dgr180,0.001,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 arachd,0.000166406,Arachidonate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-chol,0.1,Choline,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+chol,0.001,Choline,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 chsterol,0.000247898,cholesterol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-ddca,0.1,laurate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+ddca,0.001,laurate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 gchola,1.0,glycocholate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 glyc,0.0899827,Glycerol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-glyc3p,0.1,Glycerol 3-phosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+glyc3p,0.001,Glycerol 3-phosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdca,0.0198185,Hexadecanoate (n-C16:0),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdcea,0.00182585,Hexadecenoate (n-C16:1),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-lanost,0.1,lanosterol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+lanost,0.001,lanosterol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlc,0.0179555,Linoleate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlnca,0.000878256,Alpha-linolenate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlncg,0.000878256,Gamma-linolenate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdca,0.00846413,octadecanoate (n-C18:0),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdcea,0.0340722,octadecenoate (n-C18:1),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 octa,0.000647136,octanoate (n-C8:0),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+stys,0.0073957,Stachyose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 tchola,1.0,taurocholate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ttdca,0.00343378,tetradecanoate (n-C14:0),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 core2,1.0,Core 2,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
@@ -78,8 +81,6 @@ core5,1.0,Core 5,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycan
 core6,1.0,Core 6,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
 core7,1.0,Core 7,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
 core8,1.0,Core 8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
-glygn2,0.0111084,"glycogen, structure 2 (glycogenin-1,6-{7[1,4-Glc], 4[1,4-Glc]})",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
-glygn5,0.00430866,"glycogen, structure 5 (glycogenin-2[1,4-Glc])",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
 gncore1,1.0,"GlcNAc-alpha-1,4-Core 1",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
 gncore1_rl,1.0,"released GlcNAc-alpha-1,4-Core 1",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
 gncore2,1.0,"GlcNAc-alpha-1,4-Core 2",agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
@@ -90,7 +91,7 @@ cobalt2,1.0,Co2+,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & 
 cu2,1.0,Cu2+,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe2,0.1,Fe2+,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe3,0.1,Fe3+,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-fe3dcit,1.0,Fe(III)dicitrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
+fe3dcit,0.001,Fe(III)dicitrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 k,0.1,potassium,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mg2,1.0,magnesium,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mn2,1.0,Mn2+,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
@@ -100,63 +101,77 @@ pi,0.1,hydrogenphosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Min
 sel,1.0,Selenate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 so4,0.1,sulfate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 zn2,1.0,Zinc,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-ade,0.1,Adenine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-adn,0.1,Adenosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-amp,0.1,AMP,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-csn,0.1,cytosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-cytd,0.00734354,Cytidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dad_2,0.1,2-deoxyadenosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dcyt,0.1,Deoxycytidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dgsn,0.1,Deoxyguanosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-din,0.00016323,Deoxyinosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ade,0.001,Adenine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+adn,0.001,Adenosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+amp,0.001,AMP,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cmp,4.3742e-06,CMP,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+csn,0.001,cytosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cytd,0.20046,Cytidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dad_2,0.001,2-deoxyadenosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dcyt,0.001,Deoxycytidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dgsn,0.001,Deoxyguanosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+din,0.000163229,Deoxyinosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 duri,9.8102e-06,Deoxyuridine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gsn,0.00183951,Guanosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gsn,0.00114266,Guanosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 gtp,6.10044e-05,GTP,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gua,0.1,Guanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-hxan,0.1,Hypoxanthine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gua,0.001,Guanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+hxan,0.001,Hypoxanthine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 ins,0.000531916,Inosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-thymd,0.1,Thymidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-ura,0.1,uracil,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+thymd,0.001,Thymidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ura,0.001,uracil,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 urea,0.0542883,Urea,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-uri,0.1,Uridine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-xan,0.1,Xanthine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-anzp,0.00242124,anzp,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+uri,0.001,Uridine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+xan,0.001,Xanthine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+xtsn,0.000151317,xanthosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+HC00319,0.000196418,HC00319,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+anzp,0.0201086,anzp,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
 eltr_m3,4.64475e-06,eltr_m3,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+fcsn,0.187385,fcsn,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+glc3meacp,0.000104599,glc3meacp,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+glcur,0.0143316,glcur,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+lactl,0.0321866,lactl,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+srv,0.000938808,srv,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+taur,1.0511e-05,taur,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+tma,0.000182375,tma,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Other
+alaala,3.0956e-06,alaala,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 alaasp,0.0406891,L-alanyl-L-aspartate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 alaglu,0.000200056,L-alanyl-L-glutamate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-alagly,0.000897206,L-alanylglycine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-alahis,8.1948e-05,L-alanyl-L-histidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+alagly,0.000902603,L-alanylglycine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+alahis,9.2623e-05,L-alanyl-L-histidine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 alaleu,0.000460574,L-alanyl-L-leucine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-alathr,0.000538054,L-alanyl-L-threonine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasn,0.00020083,Glycyl-L-asparagine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasp,0.000579008,Glycyl-L-aspartate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+alathr,0.0133383,L-alanyl-L-threonine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasn,0.000932301,Glycyl-L-asparagine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasp,0.0160222,Glycyl-L-aspartate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 glygln,0.000526375,Glycyl-L-glutamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-glyglu,0.000438104,Glycyl-L-glutamate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-glyleu,0.000651841,Glycylleucine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+glyglu,0.000856532,Glycyl-L-glutamate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+glyleu,0.411377,Glycylleucine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 glymet,0.000130897,Glycyl-L-methionine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 glyphe,0.00018056,Glycylphenylalanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 glypro,0.00018435,Glycylproline,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-glytyr,0.00013425,Glycyl-L-tyrosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
+glytyr,0.00031481,Glycyl-L-tyrosine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
 metala,0.000130896,L-methionyl-L-alanine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Peptides
-2obut,0.1,2-Oxobutanoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-3mop,0.1,3-methyl-2-oxopentanoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-ac,0.1,acetate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-akg,0.000684836,2-Oxoglutarate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-bhb,0.00382924,bhb,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-cit,0.1,Citrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-for,0.1,Formate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-fum,0.1,Fumarate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+2obut,0.001,2-Oxobutanoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+3mop,0.001,3-methyl-2-oxopentanoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+ac,0.001,acetate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acac,0.000598209,acetoacetate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+actn_R,0.026568,(R)-Acetoin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+akg,0.0218262,2-Oxoglutarate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+bhb,0.0228069,bhb,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+but,0.000192929,butyrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+cit,0.001,Citrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+for,0.001,Formate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+fum,0.001,Fumarate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 glcn,0.00394737,D-gluconate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-glutar,0.0182564,Glutarate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-lac_L,0.000472068,(S)-lactate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-mal_L,0.00253986,(S)-malate(2-),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_D,0.0603888,lac_D,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_L,0.0234317,(S)-lactate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+mal_L,0.0596193,(S)-malate(2-),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 oxa,0.0118421,oxalate(2-),agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 pyr,0.00179572,pyruvate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-succ,0.0285851,Succinate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-acgam,0.1,N-acetyl-D-glucosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acmana,0.1,N-acetyl-D-mannosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acnam,0.1,N-acetylneuraminate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-arab_D,1.0,D-Arabinose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+succ,0.183929,Succinate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acgam,0.001,N-acetyl-D-glucosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acmana,0.001,N-acetyl-D-mannosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acnam,0.001,N-acetylneuraminate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+arab_D,0.001,D-Arabinose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 arab_L,0.00473684,L-arabinose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 bglc,1.56e-07,beta-glucans,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 cellb,0.0197368,cellobiose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -164,7 +179,7 @@ drib,0.00473684,2-deoxy-D-ribose,agora_s12_high_fiber,MICOM per-biomass (mmol/gD
 fru,0.00394737,D-Fructose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 fuc_L,0.00394737,L-fucose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 gal,0.00394737,D-Galactose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-gam,0.1,D-Glucosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+gam,0.001,D-Glucosamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 glc_D,0.00394737,D-glucose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 homogal,0.00284091,Homogalacturonan,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 lcts,0.00197368,Lactose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -179,59 +194,61 @@ sucr,0.00197368,Sucrose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simp
 tre,0.00197368,Trehalose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 xyl_D,0.00473684,aldehydo-D-xylose,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 acald,0.195598,acetaldehyde,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
-etoh,0.106871,ethanol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
-fald,0.1,formaldehyde,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
-gcald,0.0594828,glycolaldehyde,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
-indole,1.0,Indole,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
+etoh,0.0242713,ethanol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
+fald,0.001,formaldehyde,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
+indole,0.001,Indole,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
 meoh,1.0,Methanol,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Solvents
-2dmmq8,1.0,2-Demethylmenaquinone 8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4abz,1.0,4-Aminobenzoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4hbz,0.1,4-hydroxybenzoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-adocbl,1.0,Adenosylcobalamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+2dmmq8,0.001,2-Demethylmenaquinone 8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4abz,0.001,4-Aminobenzoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4hbz,0.001,4-hydroxybenzoate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+adocbl,0.001,Adenosylcobalamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
 amet,0.000852318,S-Adenosyl-L-methionine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-btn,0.1,Biotin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-cbl1,1.0,Cob(I)alamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-chor,1.0,chorismate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-coa,1.51875e-05,Coenzyme A,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-fol,0.1,Folate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthox,0.1,Oxidized glutathione,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthrd,0.1,Reduced glutathione,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn7,0.1,Menaquinone 7,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn8,0.1,Menaquinone 8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nac,0.1,Nicotinate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ncam,0.1,Nicotinamide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nmn,1.0,NMN,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pheme,0.1,Protoheme,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pime,1.0,Pimelate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pnto_R,0.1,(R)-Pantothenate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydam,0.1,Pyridoxamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx,0.1,Pyridoxal,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx5p,0.1,Pyridoxal 5-phosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydxn,0.1,Pyridoxine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-q8,1.0,Ubiquinone-8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ribflv,0.1,Riboflavin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-sheme,1.0,Siroheme,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-thm,0.1,Thiamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-co2,0.00290622,carbon dioxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
+btn,0.001,Biotin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+cbl1,0.001,Cob(I)alamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+chor,0.001,chorismate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+coa,1.58794e-05,Coenzyme A,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+dpcoa,1.58794e-05,Dephospho-CoA,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+fol,0.001,Folate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthox,0.001,Oxidized glutathione,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthrd,0.001,Reduced glutathione,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn7,0.001,Menaquinone 7,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn8,0.001,Menaquinone 8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nac,0.001,Nicotinate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nadp,7.9397e-06,Nicotinamide adenine dinucleotide phosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ncam,0.001,Nicotinamide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nmn,0.001,NMN,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pheme,0.001,Protoheme,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pime,0.001,Pimelate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pnto_R,0.001,(R)-Pantothenate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydam,0.001,Pyridoxamine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx,0.001,Pyridoxal,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx5p,0.001,Pyridoxal 5-phosphate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydxn,0.001,Pyridoxine,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+q8,0.001,Ubiquinone-8,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ribflv,0.001,Riboflavin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+sheme,0.001,Siroheme,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+thm,0.001,Thiamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+co2,0.0697489,carbon dioxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.1,proton,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2o,1.0,Water,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
-n2o,0.00860143,Nitrous oxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
-nh4,0.0185159,Ammonium,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
+n2o,0.00405654,Nitrous oxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
+nh4,0.0422202,Ammonium,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
+no,0.490858,Nitric oxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 no2,0.1,Nitrite,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 no3,1.0,Nitrate,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 o2,0.001,O2,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
-26dap_M,1.0,"meso-2,6-Diaminoheptanedioate",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-ala_D,0.8,D-alanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+26dap_M,0.001,"meso-2,6-Diaminoheptanedioate",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+ala_D,0.001,D-alanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 ala_L,0.8,L-alanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 arg_L,0.12,L-argininium(1+),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 asn_L,0.18,L-asparagine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 asp_L,0.18,L-aspartate(1-),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-cgly,0.8,L-cysteinylglycine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+cgly,0.001,L-cysteinylglycine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 cys_L,0.8,L-cysteine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 gln_L,0.144,L-glutamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-glu_D,1.0,D-Glutamate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+glu_D,0.001,D-Glutamate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 glu_L,0.144,L-glutamate(1-),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 gly,0.36,Glycine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 his_L,0.12,L-histidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -239,13 +256,13 @@ ile_L,0.12,L-isoleucine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),
 leu_L,0.12,L-leucine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 lys_L,0.12,L-lysinium(1+),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 met_L,0.144,L-methionine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-metsox_S_L,1.0,L-Methionine Sulfoxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-orn,0.8,Ornithine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+metsox_S_L,0.001,L-Methionine Sulfoxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+orn,0.001,Ornithine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 phe_L,0.8,L-phenylalanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 pro_L,0.144,L-proline,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-ptrc,0.8,Putrescine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+ptrc,0.001,Putrescine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 ser_L,0.8,L-serine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-spmd,0.8,Spermidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+spmd,0.001,Spermidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 thr_L,0.18,L-threonine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 trp_L,0.0654545,L-tryptophan,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 tyr_L,0.8,L-tyrosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -272,23 +289,24 @@ starch1200,0.00026042,"starch n=1200 repeat units (300 repeat units amylose, 900
 strch1,0.0545455,"starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xylan,0.00071023,"Oat spelt xylan, MW 79200 (DOI: 10.1002/masy.200551405) = 528 xyl_D",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xyluglc,0.00029124,Xyluglucan,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
-12dgr180,1.0,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+12dgr180,0.001,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 arachd,0.00133125,Arachidonate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-chol,0.8,Choline,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+chol,0.001,Choline,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 chsterol,0.00198318,cholesterol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-ddca,0.8,laurate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+ddca,0.001,laurate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 gchola,1.0,glycocholate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 glyc,0.719862,Glycerol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-glyc3p,0.8,Glycerol 3-phosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+glyc3p,0.001,Glycerol 3-phosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdca,0.158548,Hexadecanoate (n-C16:0),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdcea,0.0146068,Hexadecenoate (n-C16:1),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-lanost,0.8,lanosterol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+lanost,0.001,lanosterol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlc,0.143644,Linoleate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlnca,0.00702605,Alpha-linolenate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlncg,0.00702605,Gamma-linolenate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdca,0.067713,octadecanoate (n-C18:0),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdcea,0.272578,octadecenoate (n-C18:1),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 octa,0.00517709,octanoate (n-C8:0),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+stys,0.00160385,Stachyose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 tchola,1.0,taurocholate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ttdca,0.0274703,tetradecanoate (n-C14:0),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 core2,1.0,Core 2,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
@@ -310,7 +328,7 @@ cobalt2,1.0,Co2+,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Mineral
 cu2,1.0,Cu2+,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe2,0.8,Fe2+,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe3,0.8,Fe3+,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-fe3dcit,1.0,Fe(III)dicitrate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
+fe3dcit,0.001,Fe(III)dicitrate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 k,0.8,potassium,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mg2,1.0,magnesium,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mn2,1.0,Mn2+,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
@@ -320,57 +338,71 @@ pi,0.8,hydrogenphosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h)
 sel,1.0,Selenate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 so4,0.8,sulfate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 zn2,1.0,Zinc,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-ade,0.8,Adenine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-adn,0.8,Adenosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-amp,0.8,AMP,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-csn,0.8,cytosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-cytd,0.00734354,Cytidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dad_2,0.8,2-deoxyadenosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dcyt,0.8,Deoxycytidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dgsn,0.8,Deoxyguanosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ade,0.001,Adenine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+adn,0.001,Adenosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+amp,0.001,AMP,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cmp,4.3742e-06,CMP,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+csn,0.001,cytosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cytd,0.20046,Cytidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dad_2,0.001,2-deoxyadenosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dcyt,0.001,Deoxycytidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dgsn,0.001,Deoxyguanosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 din,0.000163229,Deoxyinosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 duri,9.8102e-06,Deoxyuridine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gsn,0.00183951,Guanosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gsn,0.000985715,Guanosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 gtp,6.10044e-05,GTP,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gua,0.8,Guanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-hxan,0.8,Hypoxanthine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gua,0.001,Guanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+hxan,0.001,Hypoxanthine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 ins,0.000531916,Inosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-thymd,0.8,Thymidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-ura,0.8,uracil,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+thymd,0.001,Thymidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ura,0.001,uracil,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 urea,0.0544494,Urea,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-uri,0.8,Uridine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-xan,0.8,Xanthine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+uri,0.001,Uridine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+xan,0.001,Xanthine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+HC00319,0.000317858,HC00319,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+anzp,0.0194318,anzp,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
 eltr_m3,4.64475e-06,eltr_m3,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+fcsn,0.187385,fcsn,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+glc3meacp,0.000104599,glc3meacp,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+glcur,0.0143316,glcur,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+lactl,0.0321866,lactl,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+taur,1.0511e-05,taur,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
+tma,0.000182375,tma,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Other
 alaasp,0.039814,L-alanyl-L-aspartate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 alaglu,0.000200056,L-alanyl-L-glutamate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-alagly,0.000897206,L-alanylglycine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+alagly,0.0460467,L-alanylglycine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 alahis,8.1948e-05,L-alanyl-L-histidine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 alaleu,0.000460574,L-alanyl-L-leucine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-alathr,0.00021107,L-alanyl-L-threonine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasn,0.00020083,Glycyl-L-asparagine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasp,0.000579008,Glycyl-L-aspartate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+alathr,0.00219402,L-alanyl-L-threonine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasn,0.000932301,Glycyl-L-asparagine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasp,0.00287697,Glycyl-L-aspartate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 glygln,0.00046579,Glycyl-L-glutamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyleu,0.000651841,Glycylleucine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glymet,0.000130896,Glycyl-L-methionine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glypro,0.00016103,Glycylproline,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyleu,0.411377,Glycylleucine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glymet,0.000130897,Glycyl-L-methionine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyphe,0.00015452,Glycylphenylalanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glypro,0.000175096,Glycylproline,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glytyr,0.00012068,Glycyl-L-tyrosine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 metala,0.000130896,L-methionyl-L-alanine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-2obut,0.8,2-Oxobutanoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-3mop,0.8,3-methyl-2-oxopentanoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-ac,0.8,acetate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-akg,0.000684836,2-Oxoglutarate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-cit,0.8,Citrate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-for,0.8,Formate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-fum,0.8,Fumarate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+2obut,0.001,2-Oxobutanoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+3mop,0.001,3-methyl-2-oxopentanoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+ac,0.001,acetate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acac,1.10895e-05,acetoacetate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+actn_R,0.00294357,(R)-Acetoin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+akg,0.00636335,2-Oxoglutarate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+cit,0.001,Citrate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+for,0.001,Formate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+fum,0.001,Fumarate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 glcn,0.0315789,D-gluconate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-lac_L,0.000472068,(S)-lactate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-mal_L,0.00253986,(S)-malate(2-),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_D,0.0183072,lac_D,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_L,0.0298442,(S)-lactate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+mal_L,0.036469,(S)-malate(2-),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 oxa,0.0947368,oxalate(2-),agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 pyr,0.00179572,pyruvate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-succ,0.0285851,Succinate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-acgam,0.8,N-acetyl-D-glucosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acmana,0.8,N-acetyl-D-mannosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acnam,0.8,N-acetylneuraminate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-arab_D,1.0,D-Arabinose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+succ,0.0264288,Succinate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acgam,0.001,N-acetyl-D-glucosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acmana,0.001,N-acetyl-D-mannosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acnam,0.001,N-acetylneuraminate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+arab_D,0.001,D-Arabinose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 arab_L,0.0378947,L-arabinose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 bglc,1.248e-06,beta-glucans,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 cellb,0.0197368,cellobiose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -378,7 +410,7 @@ drib,0.0378947,2-deoxy-D-ribose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol
 fru,0.0315789,D-Fructose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 fuc_L,0.0315789,L-fucose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 gal,0.0315789,D-Galactose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-gam,0.8,D-Glucosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+gam,0.001,D-Glucosamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 glc_D,0.0315789,D-glucose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 homogal,0.00284091,Homogalacturonan,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 lcts,0.0157895,Lactose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -393,58 +425,61 @@ sucr,0.0157895,Sucrose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),S
 tre,0.0157895,Trehalose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 xyl_D,0.0378947,aldehydo-D-xylose,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 acald,0.195598,acetaldehyde,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-etoh,0.127725,ethanol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-fald,0.8,formaldehyde,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-indole,1.0,Indole,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+etoh,0.128721,ethanol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+fald,0.001,formaldehyde,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+indole,0.001,Indole,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
 meoh,8.0,Methanol,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-2dmmq8,1.0,2-Demethylmenaquinone 8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4abz,1.0,4-Aminobenzoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4hbz,0.8,4-hydroxybenzoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-adocbl,1.0,Adenosylcobalamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+2dmmq8,0.001,2-Demethylmenaquinone 8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4abz,0.001,4-Aminobenzoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4hbz,0.001,4-hydroxybenzoate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+adocbl,0.001,Adenosylcobalamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
 amet,0.000852318,S-Adenosyl-L-methionine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-btn,0.8,Biotin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-cbl1,1.0,Cob(I)alamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-chor,1.0,chorismate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-coa,1.51875e-05,Coenzyme A,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-fol,0.8,Folate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthox,0.8,Oxidized glutathione,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthrd,0.8,Reduced glutathione,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn7,0.8,Menaquinone 7,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn8,0.8,Menaquinone 8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nac,0.8,Nicotinate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ncam,0.8,Nicotinamide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nmn,1.0,NMN,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pheme,0.8,Protoheme,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pime,1.0,Pimelate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pnto_R,0.8,(R)-Pantothenate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydam,0.8,Pyridoxamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx,0.8,Pyridoxal,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx5p,0.8,Pyridoxal 5-phosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydxn,0.8,Pyridoxine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-q8,1.0,Ubiquinone-8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ribflv,0.8,Riboflavin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-sheme,1.0,Siroheme,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-thm,0.8,Thiamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-co2,0.000550693,carbon dioxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+btn,0.001,Biotin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+cbl1,0.001,Cob(I)alamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+chor,0.001,chorismate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+coa,1.58794e-05,Coenzyme A,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+dpcoa,1.58794e-05,Dephospho-CoA,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+fol,0.001,Folate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthox,0.001,Oxidized glutathione,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthrd,0.001,Reduced glutathione,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn7,0.001,Menaquinone 7,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn8,0.001,Menaquinone 8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nac,0.001,Nicotinate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nadp,7.9397e-06,Nicotinamide adenine dinucleotide phosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ncam,0.001,Nicotinamide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nmn,0.001,NMN,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pheme,0.001,Protoheme,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pime,0.001,Pimelate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pnto_R,0.001,(R)-Pantothenate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydam,0.001,Pyridoxamine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx,0.001,Pyridoxal,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx5p,0.001,Pyridoxal 5-phosphate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydxn,0.001,Pyridoxine,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+q8,0.001,Ubiquinone-8,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ribflv,0.001,Riboflavin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+sheme,0.001,Siroheme,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+thm,0.001,Thiamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+co2,0.0406012,carbon dioxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.8,proton,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2o,8.0,Water,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-n2o,0.00416166,Nitrous oxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-nh4,0.00869583,Ammonium,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+n2o,0.00405654,Nitrous oxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+nh4,0.0450956,Ammonium,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+no,0.258772,Nitric oxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 no2,0.8,Nitrite,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 no3,1.0,Nitrate,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 o2,0.001,O2,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-26dap_M,1.0,"meso-2,6-Diaminoheptanedioate",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-ala_D,0.1,D-alanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+26dap_M,0.001,"meso-2,6-Diaminoheptanedioate",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+ala_D,0.001,D-alanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 ala_L,0.1,L-alanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 arg_L,0.015,L-argininium(1+),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 asn_L,0.0225,L-asparagine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 asp_L,0.0225,L-aspartate(1-),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-cgly,0.1,L-cysteinylglycine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+cgly,0.001,L-cysteinylglycine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 cys_L,0.1,L-cysteine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 gln_L,0.018,L-glutamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-glu_D,1.0,D-Glutamate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+glu_D,0.001,D-Glutamate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 glu_L,0.018,L-glutamate(1-),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 gly,0.045,Glycine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 his_L,0.015,L-histidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -452,13 +487,13 @@ ile_L,0.015,L-isoleucine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino 
 leu_L,0.015,L-leucine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 lys_L,0.015,L-lysinium(1+),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 met_L,0.018,L-methionine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-metsox_S_L,1.0,L-Methionine Sulfoxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-orn,0.1,Ornithine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+metsox_S_L,0.001,L-Methionine Sulfoxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+orn,0.001,Ornithine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 phe_L,0.1,L-phenylalanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 pro_L,0.018,L-proline,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-ptrc,0.1,Putrescine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+ptrc,0.001,Putrescine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 ser_L,0.1,L-serine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
-spmd,0.1,Spermidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
+spmd,0.001,Spermidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 thr_L,0.0225,L-threonine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 trp_L,0.00818182,L-tryptophan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
 tyr_L,0.1,L-tyrosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -470,6 +505,7 @@ arabinogal,2.191e-05,Larch arabinogalactan,agora_s12_western,MICOM per-biomass (
 arabinoxyl,0.00030665,Arabinoxylan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 cellul,2.821e-05,"Cellulose, chain length 500 glc_D assumed, DOI: 10.1002/anie.200460587",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 dextran40,0.00017632,"Dextran 40, 1,6-alpha-D-",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+dextrin,0.000905375,Dextrin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 galmannan,1.411e-05,Carob galactomannan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 glcmannan,3.288e-05,Konjac glucomannan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 inulin,0.00047019,"Chicory inulin, 30 monosaccharide units (29 fru, 1 glc) on average",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
@@ -477,6 +513,8 @@ kestopt,0.00282117,Kestopentaose,agora_s12_western,MICOM per-biomass (mmol/gDW/h
 levan1000,1.411e-05,"Levan, 1000 fructose units",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 lichn,8.298e-05,Lichenin from Icelandic,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 lmn30,0.00047019,Laminarin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+malthx,0.00120739,Maltohexaose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
+mantr,0.00180433,"mannotriose (beta-1,4)",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 pect,3.339e-06,pectins,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 pullulan1200,1.175e-05,"pullulan (n=1200 repeat units, alpha-1,4 and alph-1,6 bounds)",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 rhamnogalurI,1.449e-05,Potato,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
@@ -485,23 +523,24 @@ starch1200,1.175e-05,"starch n=1200 repeat units (300 repeat units amylose, 900 
 strch1,0.0257339,"starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xylan,3.206e-05,"Oat spelt xylan, MW 79200 (DOI: 10.1002/masy.200551405) = 528 xyl_D",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xyluglc,1.315e-05,Xyluglucan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
-12dgr180,1.0,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+12dgr180,0.001,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 arachd,0.000332813,Arachidonate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-chol,0.1,Choline,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+chol,0.001,Choline,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 chsterol,0.000495795,cholesterol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-ddca,0.1,laurate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+ddca,0.001,laurate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 gchola,1.0,glycocholate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 glyc,0.179965,Glycerol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-glyc3p,0.1,Glycerol 3-phosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+glyc3p,0.001,Glycerol 3-phosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdca,0.0396371,Hexadecanoate (n-C16:0),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdcea,0.0036517,Hexadecenoate (n-C16:1),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-lanost,0.1,lanosterol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+lanost,0.001,lanosterol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlc,0.0359109,Linoleate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlnca,0.00175651,Alpha-linolenate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlncg,0.00175651,Gamma-linolenate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdca,0.0169283,octadecanoate (n-C18:0),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdcea,0.0681445,octadecenoate (n-C18:1),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 octa,0.00129427,octanoate (n-C8:0),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+stys,0.0073957,Stachyose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 tchola,1.0,taurocholate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ttdca,0.00686757,tetradecanoate (n-C14:0),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 core2,1.0,Core 2,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
@@ -523,7 +562,7 @@ cobalt2,1.0,Co2+,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ion
 cu2,1.0,Cu2+,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe2,0.1,Fe2+,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe3,0.1,Fe3+,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-fe3dcit,1.0,Fe(III)dicitrate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
+fe3dcit,0.001,Fe(III)dicitrate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 k,0.1,potassium,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mg2,1.0,magnesium,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mn2,1.0,Mn2+,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
@@ -533,62 +572,75 @@ pi,0.1,hydrogenphosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minera
 sel,1.0,Selenate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 so4,0.1,sulfate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 zn2,1.0,Zinc,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-ade,0.1,Adenine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-adn,0.1,Adenosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-amp,0.1,AMP,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-csn,0.1,cytosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-cytd,0.00734354,Cytidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dad_2,0.1,2-deoxyadenosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dcyt,0.1,Deoxycytidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dgsn,0.1,Deoxyguanosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-din,0.00016323,Deoxyinosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ade,0.001,Adenine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+adn,0.001,Adenosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+amp,0.001,AMP,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cmp,4.3742e-06,CMP,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+csn,0.001,cytosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cytd,0.20046,Cytidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dad_2,0.001,2-deoxyadenosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dcyt,0.001,Deoxycytidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dgsn,0.001,Deoxyguanosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+din,0.000163229,Deoxyinosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 duri,9.8102e-06,Deoxyuridine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gsn,0.00183951,Guanosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gsn,0.000985715,Guanosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 gtp,6.10044e-05,GTP,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gua,0.1,Guanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-hxan,0.1,Hypoxanthine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gua,0.001,Guanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+hxan,0.001,Hypoxanthine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 ins,0.000531916,Inosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-thymd,0.1,Thymidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-ura,0.1,uracil,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+thymd,0.001,Thymidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ura,0.001,uracil,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 urea,0.0542883,Urea,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-uri,0.1,Uridine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-xan,0.1,Xanthine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-anzp,0.00242124,anzp,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+uri,0.001,Uridine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+xan,0.001,Xanthine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+HC00319,0.000196418,HC00319,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+anzp,0.0201086,anzp,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
 eltr_m3,4.64475e-06,eltr_m3,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+fcsn,0.187385,fcsn,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+glc3meacp,0.000104599,glc3meacp,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+glcur,0.0143316,glcur,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+lactl,0.0321866,lactl,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+srv,0.000938808,srv,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+taur,1.0511e-05,taur,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+tma,0.000182375,tma,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Other
+alaala,3.0956e-06,alaala,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 alaasp,0.0481542,L-alanyl-L-aspartate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 alaglu,0.000200056,L-alanyl-L-glutamate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-alagly,0.000897206,L-alanylglycine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-alahis,8.1948e-05,L-alanyl-L-histidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+alagly,0.0460467,L-alanylglycine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+alahis,9.2623e-05,L-alanyl-L-histidine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 alaleu,0.000460574,L-alanyl-L-leucine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-alathr,0.000538054,L-alanyl-L-threonine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasn,0.00020083,Glycyl-L-asparagine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasp,0.000579008,Glycyl-L-aspartate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+alathr,0.0133383,L-alanyl-L-threonine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasn,0.000932301,Glycyl-L-asparagine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasp,0.0160222,Glycyl-L-aspartate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 glygln,0.00046579,Glycyl-L-glutamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glyglu,0.000438104,Glycyl-L-glutamate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glyleu,0.000651841,Glycylleucine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glymet,0.000130896,Glycyl-L-methionine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glyglu,0.0003391,Glycyl-L-glutamate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glyleu,0.411377,Glycylleucine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glymet,0.000130897,Glycyl-L-methionine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 glyphe,0.00018056,Glycylphenylalanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-glypro,0.00016103,Glycylproline,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
+glypro,0.00018435,Glycylproline,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 glytyr,0.00013425,Glycyl-L-tyrosine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
 metala,0.000130896,L-methionyl-L-alanine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Peptides
-2obut,0.1,2-Oxobutanoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-3mop,0.1,3-methyl-2-oxopentanoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-ac,0.1,acetate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-akg,0.000684836,2-Oxoglutarate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-cit,0.1,Citrate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-for,0.1,Formate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-fum,0.1,Fumarate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+2obut,0.001,2-Oxobutanoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+3mop,0.001,3-methyl-2-oxopentanoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+ac,0.001,acetate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acac,0.000598209,acetoacetate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+actn_R,0.026568,(R)-Acetoin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+akg,0.0218262,2-Oxoglutarate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+bhb,0.00561164,bhb,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+cit,0.001,Citrate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+for,0.001,Formate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+fum,0.001,Fumarate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 glcn,0.0148986,D-gluconate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-glutar,0.0182564,Glutarate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-lac_L,0.000472068,(S)-lactate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-mal_L,0.00253986,(S)-malate(2-),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_D,0.0603888,lac_D,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_L,0.0234317,(S)-lactate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+mal_L,0.0521264,(S)-malate(2-),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 oxa,0.0446957,oxalate(2-),agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 pyr,0.00179572,pyruvate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-succ,0.0285851,Succinate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-acgam,0.1,N-acetyl-D-glucosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acmana,0.1,N-acetyl-D-mannosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acnam,0.1,N-acetylneuraminate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-arab_D,1.0,D-Arabinose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+succ,0.183929,Succinate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acgam,0.001,N-acetyl-D-glucosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acmana,0.001,N-acetyl-D-mannosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acnam,0.001,N-acetylneuraminate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+arab_D,0.001,D-Arabinose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 arab_L,0.0178783,L-arabinose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 bglc,7e-09,beta-glucans,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 cellb,0.0744929,cellobiose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -596,7 +648,7 @@ drib,0.0178783,2-deoxy-D-ribose,agora_s12_western,MICOM per-biomass (mmol/gDW/h)
 fru,0.0148986,D-Fructose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 fuc_L,0.0148986,L-fucose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 gal,0.0148986,D-Galactose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-gam,0.1,D-Glucosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+gam,0.001,D-Glucosamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 glc_D,0.0148986,D-glucose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 homogal,0.00012823,Homogalacturonan,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 lcts,0.00744929,Lactose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -611,59 +663,61 @@ sucr,0.00744929,Sucrose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple 
 tre,0.00744929,Trehalose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 xyl_D,0.0178783,aldehydo-D-xylose,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 acald,0.195598,acetaldehyde,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
-etoh,0.106871,ethanol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
-fald,0.1,formaldehyde,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
-gcald,0.0594828,glycolaldehyde,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
-indole,1.0,Indole,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
+etoh,0.0242713,ethanol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
+fald,0.001,formaldehyde,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
+indole,0.001,Indole,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
 meoh,1.0,Methanol,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Solvents
-2dmmq8,1.0,2-Demethylmenaquinone 8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4abz,1.0,4-Aminobenzoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4hbz,0.1,4-hydroxybenzoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-adocbl,1.0,Adenosylcobalamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+2dmmq8,0.001,2-Demethylmenaquinone 8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4abz,0.001,4-Aminobenzoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4hbz,0.001,4-hydroxybenzoate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+adocbl,0.001,Adenosylcobalamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
 amet,0.000852318,S-Adenosyl-L-methionine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-btn,0.1,Biotin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-cbl1,1.0,Cob(I)alamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-chor,1.0,chorismate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-coa,1.51875e-05,Coenzyme A,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-fol,0.1,Folate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthox,0.1,Oxidized glutathione,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthrd,0.1,Reduced glutathione,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn7,0.1,Menaquinone 7,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn8,0.1,Menaquinone 8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nac,0.1,Nicotinate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ncam,0.1,Nicotinamide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nmn,1.0,NMN,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pheme,0.1,Protoheme,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pime,1.0,Pimelate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pnto_R,0.1,(R)-Pantothenate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydam,0.1,Pyridoxamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx,0.1,Pyridoxal,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx5p,0.1,Pyridoxal 5-phosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydxn,0.1,Pyridoxine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-q8,1.0,Ubiquinone-8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ribflv,0.1,Riboflavin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-sheme,1.0,Siroheme,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-thm,0.1,Thiamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-co2,0.00290622,carbon dioxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
+btn,0.001,Biotin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+cbl1,0.001,Cob(I)alamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+chor,0.001,chorismate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+coa,1.58794e-05,Coenzyme A,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+dpcoa,1.58794e-05,Dephospho-CoA,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+fol,0.001,Folate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthox,0.001,Oxidized glutathione,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthrd,0.001,Reduced glutathione,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn7,0.001,Menaquinone 7,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn8,0.001,Menaquinone 8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nac,0.001,Nicotinate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nadp,7.9397e-06,Nicotinamide adenine dinucleotide phosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ncam,0.001,Nicotinamide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nmn,0.001,NMN,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pheme,0.001,Protoheme,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pime,0.001,Pimelate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pnto_R,0.001,(R)-Pantothenate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydam,0.001,Pyridoxamine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx,0.001,Pyridoxal,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx5p,0.001,Pyridoxal 5-phosphate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydxn,0.001,Pyridoxine,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+q8,0.001,Ubiquinone-8,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ribflv,0.001,Riboflavin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+sheme,0.001,Siroheme,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+thm,0.001,Thiamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+co2,0.0697489,carbon dioxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.1,proton,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2o,1.0,Water,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
-n2o,0.00860143,Nitrous oxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
-nh4,0.0255182,Ammonium,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
+n2o,0.00405654,Nitrous oxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
+nh4,0.0506986,Ammonium,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
+no,0.490858,Nitric oxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 no2,0.1,Nitrite,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 no3,1.0,Nitrate,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 o2,0.001,O2,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
-26dap_M,1.0,"meso-2,6-Diaminoheptanedioate",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-ala_D,0.8,D-alanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+26dap_M,0.001,"meso-2,6-Diaminoheptanedioate",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+ala_D,0.001,D-alanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 ala_L,0.8,L-alanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 arg_L,0.12,L-argininium(1+),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 asn_L,0.18,L-asparagine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 asp_L,0.18,L-aspartate(1-),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-cgly,0.8,L-cysteinylglycine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+cgly,0.001,L-cysteinylglycine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 cys_L,0.8,L-cysteine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 gln_L,0.144,L-glutamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-glu_D,1.0,D-Glutamate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+glu_D,0.001,D-Glutamate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 glu_L,0.144,L-glutamate(1-),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 gly,0.36,Glycine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 his_L,0.12,L-histidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -671,13 +725,13 @@ ile_L,0.12,L-isoleucine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Ami
 leu_L,0.12,L-leucine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 lys_L,0.12,L-lysinium(1+),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 met_L,0.144,L-methionine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-metsox_S_L,1.0,L-Methionine Sulfoxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-orn,0.8,Ornithine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+metsox_S_L,0.001,L-Methionine Sulfoxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+orn,0.001,Ornithine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 phe_L,0.8,L-phenylalanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 pro_L,0.144,L-proline,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-ptrc,0.8,Putrescine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+ptrc,0.001,Putrescine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 ser_L,0.8,L-serine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
-spmd,0.8,Spermidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
+spmd,0.001,Spermidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 thr_L,0.18,L-threonine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 trp_L,0.0654545,L-tryptophan,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
 tyr_L,0.8,L-tyrosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Amino acids
@@ -704,23 +758,24 @@ starch1200,1.175e-05,"starch n=1200 repeat units (300 repeat units amylose, 900 
 strch1,0.205871,"starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xylan,3.206e-05,"Oat spelt xylan, MW 79200 (DOI: 10.1002/masy.200551405) = 528 xyl_D",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
 xyluglc,1.315e-05,Xyluglucan,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Complex carbs & fibre
-12dgr180,1.0,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+12dgr180,0.001,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 arachd,0.0026625,Arachidonate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-chol,0.8,Choline,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+chol,0.001,Choline,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 chsterol,0.00396636,cholesterol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-ddca,0.8,laurate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+ddca,0.001,laurate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 gchola,1.0,glycocholate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 glyc,1.43972,Glycerol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-glyc3p,0.8,Glycerol 3-phosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+glyc3p,0.001,Glycerol 3-phosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdca,0.317097,Hexadecanoate (n-C16:0),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 hdcea,0.0292136,Hexadecenoate (n-C16:1),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
-lanost,0.8,lanosterol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+lanost,0.001,lanosterol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlc,0.287287,Linoleate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlnca,0.0140521,Alpha-linolenate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 lnlncg,0.0140521,Gamma-linolenate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdca,0.135426,octadecanoate (n-C18:0),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ocdcea,0.545156,octadecenoate (n-C18:1),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 octa,0.0103542,octanoate (n-C8:0),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
+stys,0.00160385,Stachyose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 tchola,1.0,taurocholate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 ttdca,0.0549405,tetradecanoate (n-C14:0),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Fatty acids & lipids
 core2,1.0,Core 2,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Host glycans (mucin etc.)
@@ -742,7 +797,7 @@ cobalt2,1.0,Co2+,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals &
 cu2,1.0,Cu2+,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe2,0.8,Fe2+,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 fe3,0.8,Fe3+,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-fe3dcit,1.0,Fe(III)dicitrate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
+fe3dcit,0.001,Fe(III)dicitrate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 k,0.8,potassium,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mg2,1.0,magnesium,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 mn2,1.0,Mn2+,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
@@ -752,56 +807,68 @@ pi,0.8,hydrogenphosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Mi
 sel,1.0,Selenate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 so4,0.8,sulfate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
 zn2,1.0,Zinc,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Minerals & ions
-ade,0.8,Adenine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-adn,0.8,Adenosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-amp,0.8,AMP,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-csn,0.8,cytosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-cytd,0.00734354,Cytidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dad_2,0.8,2-deoxyadenosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dcyt,0.8,Deoxycytidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-dgsn,0.8,Deoxyguanosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ade,0.001,Adenine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+adn,0.001,Adenosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+amp,0.001,AMP,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cmp,4.3742e-06,CMP,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+csn,0.001,cytosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+cytd,0.20046,Cytidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dad_2,0.001,2-deoxyadenosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dcyt,0.001,Deoxycytidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+dgsn,0.001,Deoxyguanosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 din,0.000163229,Deoxyinosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 duri,9.8102e-06,Deoxyuridine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gsn,0.00183951,Guanosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gsn,0.000985715,Guanosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 gtp,6.10044e-05,GTP,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-gua,0.8,Guanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-hxan,0.8,Hypoxanthine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+gua,0.001,Guanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+hxan,0.001,Hypoxanthine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 ins,0.000531916,Inosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-thymd,0.8,Thymidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-ura,0.8,uracil,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+thymd,0.001,Thymidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+ura,0.001,uracil,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
 urea,0.0544494,Urea,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-uri,0.8,Uridine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
-xan,0.8,Xanthine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+uri,0.001,Uridine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+xan,0.001,Xanthine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Nucleotides & bases
+HC00319,0.000317858,HC00319,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+anzp,0.0194318,anzp,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
 eltr_m3,4.64475e-06,eltr_m3,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
-alaasp,0.00644969,L-alanyl-L-aspartate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+fcsn,0.187385,fcsn,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+glc3meacp,0.000104599,glc3meacp,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+glcur,0.0143316,glcur,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+lactl,0.0321866,lactl,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+taur,1.0511e-05,taur,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+tma,0.000182375,tma,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Other
+alaasp,0.0329108,L-alanyl-L-aspartate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 alaglu,0.000200056,L-alanyl-L-glutamate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-alagly,0.000897206,L-alanylglycine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+alagly,0.0472146,L-alanylglycine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 alahis,8.1948e-05,L-alanyl-L-histidine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-alathr,0.00021107,L-alanyl-L-threonine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasn,0.00020083,Glycyl-L-asparagine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyasp,0.000579008,Glycyl-L-aspartate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+alathr,0.00219402,L-alanyl-L-threonine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasn,0.000932301,Glycyl-L-asparagine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyasp,0.00287697,Glycyl-L-aspartate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 glygln,0.00046579,Glycyl-L-glutamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glyleu,0.000651841,Glycylleucine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glymet,0.000130896,Glycyl-L-methionine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-glypro,0.00016103,Glycylproline,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glyleu,0.411377,Glycylleucine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glymet,0.000130897,Glycyl-L-methionine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glypro,0.000175096,Glycylproline,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
+glytyr,4.0112e-05,Glycyl-L-tyrosine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
 metala,0.000130896,L-methionyl-L-alanine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Peptides
-2obut,0.8,2-Oxobutanoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-3mop,0.8,3-methyl-2-oxopentanoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-ac,0.8,acetate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-akg,0.000684836,2-Oxoglutarate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-cit,0.8,Citrate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-for,0.8,Formate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-fum,0.8,Fumarate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+2obut,0.001,2-Oxobutanoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+3mop,0.001,3-methyl-2-oxopentanoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+ac,0.001,acetate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+actn_R,0.00294357,(R)-Acetoin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+akg,0.00636335,2-Oxoglutarate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+cit,0.001,Citrate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+for,0.001,Formate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+fum,0.001,Fumarate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 glcn,0.119189,D-gluconate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-lac_L,0.000472068,(S)-lactate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_D,0.0183072,lac_D,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+lac_L,0.0298442,(S)-lactate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 mal_L,0.00253986,(S)-malate(2-),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 oxa,0.357566,oxalate(2-),agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
 pyr,0.00179572,pyruvate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-succ,0.0285851,Succinate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
-acgam,0.8,N-acetyl-D-glucosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acmana,0.8,N-acetyl-D-mannosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-acnam,0.8,N-acetylneuraminate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-arab_D,1.0,D-Arabinose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+succ,0.0264288,Succinate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Short-chain & organic acids
+acgam,0.001,N-acetyl-D-glucosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acmana,0.001,N-acetyl-D-mannosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+acnam,0.001,N-acetylneuraminate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+arab_D,0.001,D-Arabinose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 arab_L,0.143026,L-arabinose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 bglc,5.6e-08,beta-glucans,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 cellb,0.0744929,cellobiose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -809,7 +876,7 @@ drib,0.143026,2-deoxy-D-ribose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW
 fru,0.119189,D-Fructose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 fuc_L,0.119189,L-fucose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 gal,0.119189,D-Galactose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
-gam,0.8,D-Glucosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
+gam,0.001,D-Glucosamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 glc_D,0.119189,D-glucose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 homogal,0.00012823,Homogalacturonan,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 lcts,0.0595943,Lactose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
@@ -824,45 +891,48 @@ sucr,0.0595943,Sucrose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simp
 tre,0.0595943,Trehalose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 xyl_D,0.143026,aldehydo-D-xylose,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Simple sugars & sugar alcohols
 acald,0.195598,acetaldehyde,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-etoh,0.127725,ethanol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-fald,0.8,formaldehyde,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-indole,1.0,Indole,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+etoh,0.128721,ethanol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+fald,0.001,formaldehyde,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
+indole,0.001,Indole,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
 meoh,8.0,Methanol,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Solvents
-2dmmq8,1.0,2-Demethylmenaquinone 8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4abz,1.0,4-Aminobenzoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-4hbz,0.8,4-hydroxybenzoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-adocbl,1.0,Adenosylcobalamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+2dmmq8,0.001,2-Demethylmenaquinone 8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4abz,0.001,4-Aminobenzoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+4hbz,0.001,4-hydroxybenzoate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+adocbl,0.001,Adenosylcobalamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
 amet,0.000852318,S-Adenosyl-L-methionine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-btn,0.8,Biotin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-cbl1,1.0,Cob(I)alamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-chor,1.0,chorismate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-coa,1.51875e-05,Coenzyme A,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-fol,0.8,Folate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthox,0.8,Oxidized glutathione,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-gthrd,0.8,Reduced glutathione,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn7,0.8,Menaquinone 7,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-mqn8,0.8,Menaquinone 8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nac,0.8,Nicotinate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ncam,0.8,Nicotinamide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-nmn,1.0,NMN,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pheme,0.8,Protoheme,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pime,1.0,Pimelate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pnto_R,0.8,(R)-Pantothenate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydam,0.8,Pyridoxamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx,0.8,Pyridoxal,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydx5p,0.8,Pyridoxal 5-phosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-pydxn,0.8,Pyridoxine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-q8,1.0,Ubiquinone-8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-ribflv,0.8,Riboflavin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-sheme,1.0,Siroheme,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-thm,0.8,Thiamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
-co2,0.000550693,carbon dioxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+btn,0.001,Biotin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+cbl1,0.001,Cob(I)alamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+chor,0.001,chorismate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+coa,1.58794e-05,Coenzyme A,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+dpcoa,1.58794e-05,Dephospho-CoA,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+fol,0.001,Folate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthox,0.001,Oxidized glutathione,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+gthrd,0.001,Reduced glutathione,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn7,0.001,Menaquinone 7,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+mqn8,0.001,Menaquinone 8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nac,0.001,Nicotinate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nadp,7.9397e-06,Nicotinamide adenine dinucleotide phosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ncam,0.001,Nicotinamide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+nmn,0.001,NMN,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pheme,0.001,Protoheme,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pime,0.001,Pimelate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pnto_R,0.001,(R)-Pantothenate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydam,0.001,Pyridoxamine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx,0.001,Pyridoxal,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydx5p,0.001,Pyridoxal 5-phosphate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+pydxn,0.001,Pyridoxine,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+q8,0.001,Ubiquinone-8,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+ribflv,0.001,Riboflavin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+sheme,0.001,Siroheme,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+thm,0.001,Thiamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins & cofactors
+co2,0.0406012,carbon dioxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.8,proton,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2o,8.0,Water,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-n2o,0.00416166,Nitrous oxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-nh4,0.00869583,Ammonium,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+n2o,0.00405654,Nitrous oxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+nh4,0.0450956,Ammonium,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+no,0.258772,Nitric oxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 no2,0.8,Nitrite,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 no3,1.0,Nitrate,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 o2,0.001,O2,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases

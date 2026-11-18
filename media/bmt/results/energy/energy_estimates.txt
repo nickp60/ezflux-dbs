@@ -13,9 +13,9 @@ kcal_day  1075.0  674.0  185.0    184.0    152.0   4.0
 
 === every medium as stored (see docstring caveat); starch residues 12/4
 agora_s12_high_fiber           total        1   starch       0   non-starch        1
-agora_s12_high_fiber_bmt       total        9   starch       0   non-starch        8
-agora_s12_western              total        2   starch       0   non-starch        2
-agora_s12_western_bmt          total       13   starch       2   non-starch       11
+agora_s12_high_fiber_bmt       total        7   starch       0   non-starch        6
+agora_s12_western              total        2   starch       0   non-starch        1
+agora_s12_western_bmt          total       10   starch       2   non-starch        9
 baobab_honey_antelope          total       63   starch       2   non-starch       61
 breast_milk_agora              total       58   starch       0   non-starch       58
 guerrero_mountains             total       50   starch       3   non-starch       47
