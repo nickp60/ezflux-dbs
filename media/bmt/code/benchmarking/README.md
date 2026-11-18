@@ -8,12 +8,17 @@ results. Not part of `run_all.sh` (it is slow and optional).
 - `params.txt`: one line per run. Each line is the argument string for `05_complete_medium.py`:
   the skeleton CSV, `--weights` or `--minimize-components`, `--max-added-import`, `--growth`,
   `--o2` and `--out-dir` (one folder per run). Paths are relative to this folder. The default file
-  has 296 lines, all on `agora_s12_western`. The first 240: growth 0.001, 0.005, 0.01, 0.05 x O2 0, 0.001, 0.1 x
+  has 654 lines. Lines 1-296 are on `agora_s12_western`, 297-592 repeat them on `agora_s12_high_fiber`
+  (the high-fiber folders are written under `agora_s12_western/` by the existing lines; the summary file names carry the diet).
+  The first 240 of each block: growth 0.001, 0.005, 0.01, 0.05 x O2 0, 0.001, 0.1 x
   five methods (`--minimize-components`, `--weights` None, mass, C, N) x `--max-added-import`
   0.5, 1, 5, 10. Run folders are named `growth-<g>_o2-<o>_<method>_cap-<c>`.
   Lines 241-296 repeat part of that grid with `--cofactor-max-flux` 0.1, 0.03, 0.01, 0.003, 0.001,
   0.0001 and 0 (O2 0.001; growth 0.001 and 0.01; `--minimize-components` and `--weights mass`; cap
   1 and 10), folders `..._cap-<c>_cof-<f>`. The matching runs without a limit are in the first 240 lines.
+  Lines 593-654 use `--strict-diet` on both diets, in folders `<diet>/..._strict`: growth 0.001, 0.005, 0.01 x
+  `--minimize-components`, `--weights mass`, `--weights None` x cap 1, 5, 10 (O2 0.001), plus
+  `--weights mass`, cap 5 with `--cofactor-max-flux` 0.01 and 0.003 at growth 0.001 and 0.005.
 - `benchmarking.sh`: runs line N of `params.txt`, where N is `SLURM_ARRAY_TASK_ID`, through
   `05_complete_medium.py` with `--threads` set to the cores SLURM gave the task. Defaults, set in
   the `#SBATCH` lines at the top: at most 20 tasks at once, 1 core, 8 GB, 8 hours per task.
@@ -67,8 +72,14 @@ summary failed or has not finished; read its log. `report.py` prints how many of
   (`INORGANIC` in 05) are unchanged unless `--cofactor-include-inorganic` is given. `report.py` has a
   `cofactor_max_flux` column (empty = no limit). Look for the lowest limit at which `n_grow_check`
   stays at `n_taxa`, then look at which taxa drop out below it.
+- Strict diet: without `--strict-diet`, completion may raise a diet row above its skeleton value, but the export
+  keeps the skeleton value for diet rows, so the medium that is written is less generous than the one that was
+  solved. This shows up as `n_can_grow_completion` larger than `n_grow_check` (the `gap`). `--strict-diet` fixes every
+  skeleton row (including o2 and the cofactor rows) so completion has to use added compounds only; the summary has
+  a `strict_diet` column and `report.py` carries it. Compare strict and non-strict runs only at the same other
+  parameters, and expect more added compounds with strict.
 - Edit or add lines in `params.txt`, then set the array size to the number of lines:
-  `sbatch --array=1-N%20 benchmarking.sh` (the `#SBATCH --array=1-296%40` line only fits the default file).
+  `sbatch --array=1-N%20 benchmarking.sh` (the `#SBATCH --array=593-654%40` line runs only the strict-diet lines; use `1-654%40` for everything, finished runs are skipped).
 - Resubmitting is safe: a run whose `<diet>_run_summary.json` already exists is skipped (the task log says so), so after a failure or timeout `sbatch benchmarking.sh` only does the missing runs. To redo finished runs, use `sbatch --export=ALL,FORCE=1 benchmarking.sh`, or delete their folders. Run one line: `sbatch --array=7 benchmarking.sh` (add `FORCE=1` if it already finished).
 - Different limits: pass them to `sbatch`, for example `sbatch --mem=16G --time=24:00:00 benchmarking.sh`
   (command-line options override the `#SBATCH` lines). `--minimize-components` runs may need more time.

@@ -41,6 +41,13 @@ Parameters
                         (see INORGANIC below) are never changed.  The limited rows are strict in
                         complete_db_medium, so completion cannot raise them again.  Default: no limit.
 --cofactor-include-inorganic  also apply the limit to the carbon-free rows (ions, gases)
+--strict-diet           make every row of the skeleton strict in complete_db_medium: completion may not raise
+                        any diet compound above its skeleton value and has to meet --growth with added
+                        compounds only.  Without it completion can ramp up a diet row (up to
+                        --max-added-import), but the export keeps the skeleton value for diet rows, so
+                        the exported medium is less generous than the one completion solved and
+                        taxa can fail in check_db_medium (n_can_grow_completion > n_grow_check).
+                        Includes the o2 and cofactor rows.  Default: off (micom's VMH recipes do not use it).
 --threads               worker processes
 --model-db              model database .qza (default ../data/agora201_refseq216_species_1.qza)
 
@@ -93,6 +100,8 @@ def main():
                     help="limit for the carbon-bearing 'Minerals, vitamins, other' rows (default: no limit)")
     ap.add_argument("--cofactor-include-inorganic", action="store_true",
                     help="also limit the carbon-free rows (ions, gases); water and methanol never change")
+    ap.add_argument("--strict-diet", action="store_true",
+                    help="completion may not raise any skeleton row above its skeleton value")
     ap.add_argument("--threads", type=int, default=1)
     ap.add_argument("--model-db", default=str(here / "../data/agora201_refseq216_species_1.qza"))
     ap.add_argument("--media-dir", default=str(here / "../data/media_csv"))
@@ -122,6 +131,10 @@ def main():
         n_cofactors = len(cof_ids)
         print(f"{n_cofactors} cofactor rows limited to <= {args.cofactor_max_flux:g}; "
               f"skeleton flux is now {skel.flux.sum():.2f}")
+
+    if args.strict_diet:
+        strict = sorted(set(strict) | set(skel.global_id))
+        print(f"strict diet: all {len(strict)} skeleton rows are fixed at their skeleton flux")
 
     # annotation table for the added compounds (same as in 03_make_micom_media.py)
     media = [pd.read_csv(f) for f in sorted(Path(args.media_dir).glob("*.csv"))]
@@ -177,6 +190,7 @@ def main():
         "o2": float(skel.loc[skel.metabolite == "o2", "flux"].iloc[0]) if (skel.metabolite == "o2").any() else None,
         "cofactor_max_flux": args.cofactor_max_flux,
         "n_cofactor_rows_limited": n_cofactors,
+        "strict_diet": args.strict_diet,
         "n_taxa": int(len(manifest)),
         "n_can_grow_completion": int(manifest.can_grow.sum()),
         "n_grow_check": int((gr >= args.growth - 1e-6).sum()),

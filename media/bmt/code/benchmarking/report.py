@@ -25,11 +25,12 @@ rows = []
 for f in sorted(results.glob("*/*/*_run_summary.json")):
     row = json.loads(f.read_text())
     row.setdefault("cofactor_max_flux", None)  # runs from before the option existed: no limit
+    row.setdefault("strict_diet", False)       # runs from before --strict-diet existed
     row["condition"] = f.parent.name
     row["total_s"] = row["complete_s"] + row["check_s"]
     rows.append(row)
 report = pd.DataFrame(rows)
-params = ["growth", "o2", "cofactor_max_flux", "weights", "minimize_components", "max_added_import"]
+params = ["growth", "o2", "cofactor_max_flux", "strict_diet", "weights", "minimize_components", "max_added_import"]
 report = report[["diet", "condition"] + params + [c for c in report.columns if c not in ["diet", "condition"] + params]]
 report.to_csv(results / "benchmark_report.csv", index=False)
 

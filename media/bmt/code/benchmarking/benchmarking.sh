@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=media_bench
-#SBATCH --array=296-592%40
+#SBATCH --array=593-654%40
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=32G
 #SBATCH --time=02:00:00
