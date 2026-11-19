@@ -22,7 +22,9 @@ E  Table 12 table itself: the harmonised `metabolite` column agrees with the tab
 E  Table 12 diets (agora_s12_*): every table compound is present, and
    skeleton flux / table value is either 1 (not diluted) or the diet's dilution factor
    (0.1, or 0.8 for *_bmt); the diluted set is identical in all Table 12 diets, and the *_bmt
-   and base diets differ only by the factor 8 for diluted compounds
+   and base diets differ only by the factor 8 for diluted compounds.  agora_s12_fiber_pulse is
+   compared with the western column outside the Fiber rows; its Fiber rows must be raised by one
+   common factor (within 2%) of at least 1
 W  IDs that none of the provided media contain (may be legitimate, but are worth a look)
 """
 import argparse
@@ -121,6 +123,24 @@ for diet, d in skel.items():
     factor = DILUTION["bmt" if diet.endswith("_bmt") else "base"]
     d = d.set_index("metabolite")
     table = s12.set_index("metabolite")[col]
+    if "fiber_pulse" in diet:
+        # western everywhere except the Fiber rows.  The fold is measured against the western skeleton, so
+        # the dilution (1 or the factor, per compound) cancels; the Fiber rows are then checked for one common
+        # fold >= 1, and given the expected value `flux / dilution` so the generic check below passes.
+        fiber_ids = list(s12.loc[s12.table_category == "Fiber", "metabolite"])
+        west = skel.get("agora_s12_western")
+        if west is None or "metabolite" not in west:
+            err(diet, "check agora_s12_fiber_pulse together with agora_s12_western (the fiber fold is measured against it)")
+            table = table.drop(fiber_ids)
+        else:
+            west = west.set_index("metabolite")
+            fold = (d.flux[fiber_ids] / west.flux[fiber_ids]).dropna()
+            if len(fold) != len(fiber_ids) or fold.min() < 1 - 1e-6 or fold.max() / fold.min() > 1.02:
+                err(diet, f"Fiber rows are not raised by one common factor >= 1 over agora_s12_western "
+                          f"(range {fold.min():.3f}-{fold.max():.3f}, {len(fold)}/{len(fiber_ids)} rows)")
+            dil = (west.flux[fiber_ids] / table[fiber_ids])
+            table = table.copy()
+            table[fiber_ids] = d.flux[fiber_ids] / dil
     absent = sorted(set(table.index) - set(d.index))
     if absent:
         err(diet, f"Table 12 compounds missing from the skeleton: {absent}")

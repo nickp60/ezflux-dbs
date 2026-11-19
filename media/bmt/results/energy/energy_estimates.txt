@@ -12,6 +12,7 @@ kcal_day  1075.0  674.0  185.0    184.0    152.0   4.0
   excluding D-amino-acid duplicates: 2250 kcal
 
 === every medium as stored (see docstring caveat); starch residues 12/4
+agora_s12_fiber_pulse          total        2   starch       0   non-starch        2
 agora_s12_high_fiber           total        1   starch       0   non-starch        1
 agora_s12_high_fiber_bmt       total        7   starch       0   non-starch        6
 agora_s12_western              total        2   starch       0   non-starch        1

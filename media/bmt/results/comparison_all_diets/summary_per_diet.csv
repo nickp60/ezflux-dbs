@@ -1,4 +1,5 @@
 diet,unit_group,n_components,total_flux,median_flux,max_flux,water_flux,unclassified_components
+agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),242,34.19587813135,0.0040190799999999995,1.0,1.0,11.0
 agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),245,33.61298095945,0.00394737,1.0,1.0,14.0
 agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),230,59.58372799355,0.0033136299999999997,8.0,8.0,9.0
 agora_s12_western,MICOM per-biomass (mmol/gDW/h),242,33.98748140735,0.001776115,1.0,1.0,11.0

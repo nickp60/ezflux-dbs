@@ -4,7 +4,7 @@
 # Usage (from any folder):
 #     python 03_make_micom_media.py
 #
-# Follows the structure of data/inputs/vmh_high_fiber_reference.ipynb, applied to four diets at
+# Follows the structure of data/inputs/vmh_high_fiber_reference.ipynb, applied to five diets at
 # once (stacked in one long table with a `diet` column, so every step runs once):
 #
 #   * agora_s12_western, agora_s12_high_fiber: AGORA Supplementary Table 12 (mmol/gDW/h, from
@@ -12,6 +12,10 @@
 #   * agora_s12_western_bmt, agora_s12_high_fiber_bmt: the same two Table 12 diets, but absorbed
 #     metabolites are multiplied by 0.8 instead of 0.1, representing a less efficient upper GI
 #     tract that lets more nutrients reach the colon
+#   * agora_s12_fiber_pulse: an intervention that adds fiber to the Western diet.  Every compound
+#     is the Western Table 12 value except the 24 "Fiber" rows, which are raised to the high-fiber
+#     diet's values (about 22x the Western ones).  Set FIBER_PULSE_FOLD below to a number to
+#     multiply the Western fiber rows by that factor instead.  Same dilution as the Western diet.
 #
 # Steps: 1. floor very low values, 2. dilute metabolites absorbed in the small intestine
 # (Recon3D exchanges), 3. add mucin cores, primary bile acids and O2, 4. save each
@@ -32,7 +36,11 @@ from cobra.io import read_sbml_model
 
 root = Path(__file__).resolve().parent.parent
 dilutions = {"agora_s12_western": 0.1, "agora_s12_high_fiber": 0.1,
-             "agora_s12_western_bmt": 0.8, "agora_s12_high_fiber_bmt": 0.8}
+             "agora_s12_western_bmt": 0.8, "agora_s12_high_fiber_bmt": 0.8,
+             "agora_s12_fiber_pulse": 0.1}
+# Fiber pulse: None = the Fiber rows take the high-fiber column of Table 12 as tabulated (a factor of
+# 22.15 +/- 0.1 relative to the Western rows); a number = Western fiber rows multiplied by it.
+FIBER_PULSE_FOLD = None
 
 # --- Read the diets -------------------------------------------------------------------------------
 # The template reads agora_metabolites.csv for annotations. We rebuild an equivalent table from
@@ -50,8 +58,17 @@ print("annotations:", annotations.shape)
 west = s12[["metabolite", "western"]].rename(columns={"western": "flux"})
 fiber = s12[["metabolite", "high_fiber"]].rename(columns={"high_fiber": "flux"})
 
+# Fiber pulse: the Western diet with only the Fiber rows raised
+is_fiber = s12.table_category == "Fiber"
+pulse = west.copy()
+pulse.loc[is_fiber, "flux"] = (fiber.loc[is_fiber, "flux"] if FIBER_PULSE_FOLD is None
+                               else west.loc[is_fiber, "flux"] * FIBER_PULSE_FOLD)
+print(f"fiber pulse: {int(is_fiber.sum())} fiber rows, median fold over Western "
+      f"{(pulse.flux[is_fiber] / west.flux[is_fiber]).median():.2f}; other rows unchanged")
+
 diet = pd.concat({"agora_s12_western": west, "agora_s12_high_fiber": fiber,
-                  "agora_s12_western_bmt": west, "agora_s12_high_fiber_bmt": fiber},
+                  "agora_s12_western_bmt": west, "agora_s12_high_fiber_bmt": fiber,
+                  "agora_s12_fiber_pulse": pulse},
                  names=["diet"]).reset_index(level=0)
 diet.loc[diet.flux == 0, "flux"] = 1e-4  # bug in VMH designer where everything <1e-4 gets truncated to 0
 
