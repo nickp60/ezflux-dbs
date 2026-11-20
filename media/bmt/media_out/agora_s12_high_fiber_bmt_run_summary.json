@@ -17,9 +17,9 @@
   "growth_rate_mean": 0.039006661551737994,
   "growth_rate_max": 1.4034399423531305,
   "n_added_compounds": 50,
-  "skeleton_flux": 58.07010051399999,
-  "added_flux": 1.5136286521185007,
-  "added_pct_of_skeleton": 2.6065542141666924,
-  "complete_s": 1222.7604577541351,
-  "check_s": 1161.5505475997925
+  "skeleton_flux": 60.07010051399999,
+  "added_flux": 1.5136286521184998,
+  "added_pct_of_skeleton": 2.5197704667827754,
+  "complete_s": 1251.9314637184143,
+  "check_s": 1201.2877187728882
 }

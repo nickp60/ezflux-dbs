@@ -14,12 +14,12 @@
   "growth_rate_min": 4.936786307258631e-06,
   "growth_rate_q25": 0.0032211202411974835,
   "growth_rate_median": 0.004752961593224069,
-  "growth_rate_mean": 0.016551149936638754,
+  "growth_rate_mean": 0.016603850223184728,
   "growth_rate_max": 0.17849236174566524,
   "n_added_compounds": 62,
-  "skeleton_flux": 31.935759753999996,
-  "added_flux": 2.2601181507485766,
-  "added_pct_of_skeleton": 7.07707650658129,
-  "complete_s": 1241.7784423828125,
-  "check_s": 1083.8468408584595
+  "skeleton_flux": 40.93575975399999,
+  "added_flux": 2.260118150748576,
+  "added_pct_of_skeleton": 5.521134001984002,
+  "complete_s": 1236.5084993839264,
+  "check_s": 1209.4385912418365
 }

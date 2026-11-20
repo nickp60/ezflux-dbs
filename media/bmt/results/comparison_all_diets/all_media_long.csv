@@ -233,7 +233,7 @@ thm,0.001,Thiamin,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Vitamins 
 co2,0.0697489,carbon dioxide,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.1,proton,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
-h2o,1.0,Water,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
+h2o,10.0,Water,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
 n2o,0.00413191,Nitrous oxide,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
 nh4,0.081965,Ammonium,agora_s12_fiber_pulse,MICOM per-biomass (mmol/gDW/h),Water & gases
@@ -478,7 +478,7 @@ thm,0.001,Thiamin,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Vitamins &
 co2,0.0387008,carbon dioxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.1,proton,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
-h2o,1.0,Water,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
+h2o,10.0,Water,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 n2o,0.00413191,Nitrous oxide,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
 nh4,0.081965,Ammonium,agora_s12_high_fiber,MICOM per-biomass (mmol/gDW/h),Water & gases
@@ -708,7 +708,7 @@ thm,0.001,Thiamin,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Vitami
 co2,0.0406012,carbon dioxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.8,proton,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-h2o,8.0,Water,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+h2o,10.0,Water,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 n2o,0.00405654,Nitrous oxide,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 nh4,0.0450956,Ammonium,agora_s12_high_fiber_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
@@ -950,7 +950,7 @@ thm,0.001,Thiamin,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Vitamins & co
 co2,0.0697489,carbon dioxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.1,proton,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
-h2o,1.0,Water,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
+h2o,10.0,Water,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 n2o,0.00413191,Nitrous oxide,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
 nh4,0.081965,Ammonium,agora_s12_western,MICOM per-biomass (mmol/gDW/h),Water & gases
@@ -1177,7 +1177,7 @@ thm,0.001,Thiamin,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Vitamins 
 co2,0.0406012,carbon dioxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h,0.8,proton,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2,1.0,Hydrogen,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
-h2o,8.0,Water,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
+h2o,10.0,Water,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 h2s,1.0,Hydrogen sulfide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 n2o,0.00405654,Nitrous oxide,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases
 nh4,0.0450956,Ammonium,agora_s12_western_bmt,MICOM per-biomass (mmol/gDW/h),Water & gases

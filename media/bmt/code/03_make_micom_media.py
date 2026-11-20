@@ -41,6 +41,9 @@ dilutions = {"agora_s12_western": 0.1, "agora_s12_high_fiber": 0.1,
 # Fiber pulse: None = the Fiber rows take the high-fiber column of Table 12 as tabulated (a factor of
 # 22.15 +/- 0.1 relative to the Western rows); a number = Western fiber rows multiplied by it.
 FIBER_PULSE_FOLD = None
+# Water is set to the same value in every diet (mmol/gDW/h), undiluted, so that it is never limiting and does
+# not vary between diets.  10 is the Table 12 value and what the provided Western medium has.
+WATER_FLUX = 10.0
 
 # --- Read the diets -------------------------------------------------------------------------------
 # The template reads agora_metabolites.csv for annotations. We rebuild an equivalent table from
@@ -88,7 +91,7 @@ diet["flux"] = diet["flux"] * diet["dilution"]
 print(diet.groupby("diet").dilution.value_counts())
 
 # --- Adding host supplied components --------------------------------------------------------------
-# Mucins, primary bile acids and a minuscule amount of oxygen, as in the template.
+# Mucins, primary bile acids and a minuscule amount of oxygen, as in the template; water is also fixed here.
 diet.set_index(["diet", "metabolite"], inplace=True)
 
 for d in dilutions:
@@ -102,6 +105,9 @@ for d in dilutions:
 
     # anaerobic
     diet.loc[(d, "o2"), "flux"] = 0.001
+
+    # water: the same, undiluted, in every diet (Recon3D has a water exchange, so it was diluted above)
+    diet.loc[(d, "h2o"), ["flux", "dilution"]] = [WATER_FLUX, 1.0]
 
 diet.reset_index(inplace=True)
 diet["reaction"] = "EX_" + diet.metabolite + "(e)"

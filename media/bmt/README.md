@@ -95,7 +95,7 @@ Run the scripts from `code/` (or run `bash run_all.sh` from the archive root).
 
 1. Take the Table 12 values and floor zeros to 1e-4.
 2. Dilute every metabolite with a Recon3D exchange: 0.1 for the Table 12 diets (the factor seen in `western_diet_gut_agora`), and 0.8 for `agora_s12_western_bmt` and `agora_s12_high_fiber_bmt`, the same Table 12 diets with a less efficient upper GI tract so that more nutrients reach the colon. All are set in the `dilutions` dict in the first code cell.
-3. Add mucin cores, gchola/tchola and O2 0.001 to all four.
+3. Add mucin cores, gchola/tchola and O2 0.001 to all diets, and set water (`h2o`) to 10 mmol/gDW/h, undiluted, in every diet (`WATER_FLUX` in the script; before this it was 1 in the base diets and 8 in the `_bmt` ones because Recon3D has a water exchange and so it was diluted).
 4. Merge annotations, save `media_out/<diet>_skeleton.csv`, then `complete_db_medium` (growth 0.05, max_added_import 100, weights="mass") per diet, `check_db_medium`, and save `media_out/<diet>_micom_medium.csv`.
 
 Script 03 writes CSV only; QIIME 2 artifacts are not created. The annotation table is rebuilt from the provided media (`data/media_csv/`) and Table 12, since the template's `agora_metabolites.csv` is not available, so the merge is a left join (unannotated compounds keep an empty name).

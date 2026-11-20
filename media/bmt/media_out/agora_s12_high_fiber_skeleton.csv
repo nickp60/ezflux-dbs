@@ -122,7 +122,7 @@ agora_s12_high_fiber,gthrd,0.1,0.1,EX_gthrd_m,Reduced glutathione,HMDB00125,C000
 agora_s12_high_fiber,gua,0.1,0.1,EX_gua_m,Guanine,HMDB00132,C00242,764.0,"InChI=1S/C5H5N5O/c6-5-9-3-2(4(11)10-5)7-1-8-3/h1H,(H4,6,7,8,9,10,11)",,EX_gua(e)
 agora_s12_high_fiber,h,0.1,0.1,EX_h_m,proton,HMDB01362,C00282,1038.0,InChI=1S/p+1/i/hH,,EX_h(e)
 agora_s12_high_fiber,h2,1.0,1.0,EX_h2_m,Hydrogen,HMDB01362,C00282,783.0,InChI=1S/H2/h1H,,EX_h2(e)
-agora_s12_high_fiber,h2o,1.0,0.1,EX_h2o_m,Water,HMDB02111,C00001,962.0,InChI=1S/H2O/h1H2,,EX_h2o(e)
+agora_s12_high_fiber,h2o,10.0,1.0,EX_h2o_m,Water,HMDB02111,C00001,962.0,InChI=1S/H2O/h1H2,,EX_h2o(e)
 agora_s12_high_fiber,h2s,1.0,1.0,EX_h2s_m,Hydrogen sulfide,,,,,,EX_h2s(e)
 agora_s12_high_fiber,hxan,0.1,0.1,EX_hxan_m,Hypoxanthine,HMDB00157,C00262,790.0,"InChI=1S/C5H4N4O/c10-5-3-4(7-1-6-3)8-2-9-5/h1-2H,(H2,6,7,8,9,10)",,EX_hxan(e)
 agora_s12_high_fiber,indole,1.0,1.0,EX_indole_m,Indole,,,,,,EX_indole(e)
